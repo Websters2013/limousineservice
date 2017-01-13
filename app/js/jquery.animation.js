@@ -38,39 +38,13 @@
 
                     if( _window.scrollTop() > (topPos - windowH/1.8) && !curItem.hasClass( 'animation' ) ){
 
-                        if (curItem.parent( '.method__list' ).length) {
+                        curItem.addClass( 'animation' );
 
-                            _listAnimations( curItem );
-
-
-                        } else {
-
-                            curItem.addClass( 'animation' );
-
-                        }
                     }
                 })
             },
-            _listAnimations = function ( elem ) {
-
-                var curElem = elem;
-
-                if (!curElem.hasClass( 'active' )) {
-
-                    curElem.prev().removeClass( 'active' );
-                    curElem.prev().addClass( 'prev' );
-                    curElem.next().removeClass( 'active' );
-                    curElem.next().removeClass( 'prev' );
-                    curElem.removeClass( 'prev' );
-                    curElem.addClass( 'active' );
-
-                }
-
-            },
-
             _init = function () {
                 _obj[0].slides = _self;
-                _test();
                 _onEvents();
                 _checkScroll();
             };

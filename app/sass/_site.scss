@@ -161,11 +161,11 @@
       transform: rotate(360deg);
 
       span {
-        background: $main-white-color;
+        background: #16171c;
 
         &:before,
         &:after {
-          background: $main-white-color;
+          background: #16171c;
         }
       }
     }
@@ -338,13 +338,21 @@
       padding: 18.85% 15px 17.1%;
     }
     &__hero-title {
+      opacity: 0;
       font-size: 40px;
+
+      &.animation {
+        animation: fade-in .6s forwards .5s;
+      }
     }
     &__hero-play {
 
       span {
         font-size: 13px;
         letter-spacing: 1.3px;
+      }
+      &.animation {
+
       }
     }
     &__hero-play-icon {

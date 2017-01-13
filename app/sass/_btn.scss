@@ -11,7 +11,7 @@
   color: $main-blue-color;
   text-transform: uppercase;
   @include main-font5();
-  @include transition(all, $animation-time, 0);
+  @include transition(all, $animation-time, .05);
 
   &_book {
     padding: 0 39px 0 19px;
@@ -32,7 +32,7 @@
       line-height: 1;
       text-align: center;
       color: $main-white-color;
-      @include transition(all, $animation-time, 0)
+      @include transition(all, $animation-time, .05)
     }
   }
   &_book-2 {

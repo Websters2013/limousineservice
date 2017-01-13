@@ -284,7 +284,7 @@
     position: relative;
     font-size: 13px;
     line-height: 18px;
-    color: #484848;
+    color: #747474;
     text-align: center;
 
     span {
@@ -297,7 +297,7 @@
       @include transition(color, $animation-time, 0);
 
       &:hover {
-        color: #484848;
+        color: #747474;
       }
     }
   }

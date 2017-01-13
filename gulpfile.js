@@ -24,6 +24,13 @@ var paths = {
                 'app/js/jquery.popup.js',
                 'app/js/jquery.animation.js'
             ]
+        },
+        {
+            dist: 'history.min.js',
+            contains: [
+                'app/js/jquery.main.js',
+                'app/js/jquery.animation.js'
+            ]
         }
     ],
     vendorScripts: 'app/js/vendors/**/*.js',

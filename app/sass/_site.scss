@@ -58,17 +58,17 @@
     &-item {
       display: block;
       position: relative;
-      margin: 0 auto 15px;
+      margin: 0 0 20px 0;
       @include main-font6();
       font-weight: 700;
       text-transform: uppercase;
 
       a {
-        font-size: 16px;
+        font-size: 18px;
         color: $header-menu-color;
 
         &.active {
-          opacity: .8;
+          opacity: .6;
           cursor: default;
         }
       }
@@ -256,8 +256,7 @@
     > div {
       display: inline-block;
       vertical-align: top;
-      width: 49%;
-      padding: 0 10px;
+      margin-bottom: 10px;
       font-size: 13px;
       line-height: 18px;
       color: $main-white-color;
@@ -294,6 +293,7 @@
       margin-bottom: 10px;
     }
     a {
+      display: inline-block;
       color: $main-white-color;
       @include transition(color, $animation-time, 0);
 
@@ -436,7 +436,7 @@
 
           &:hover,
           &.active {
-            opacity: .7;
+            opacity: .6;
             border-bottom: none;
           }
         }
@@ -459,13 +459,13 @@
     }
     &__footer-top {
       margin-bottom: 135px;
-      //text-align: left;
       white-space: nowrap;
 
       > div {
         white-space: normal;
         font-size: 18px;
         line-height: 28px;
+        margin-bottom: 0;
 
         &:nth-child(1) {
           width: 330px;

@@ -1,0 +1,88 @@
+
+.book-now {
+  padding: 129px 0 54px;
+  background: $main-blue-color;
+  color: $main-white-color;
+
+  > div {
+    text-align: center;
+  }
+  p {
+    width: 100%;
+    max-width: 685px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    line-height: 17px;
+    color: $main-white-color;
+    @include main-font6();
+  }
+  a {
+    position: relative;
+    display: inline-block;
+    padding-right: 40px;
+    font-size: 14px;
+    line-height: 22px;
+    text-transform: uppercase;
+    color: $main-white-color;
+    @include main-font5();
+
+    i {
+      @include absoluteCenterY();
+      right: 0;
+      display: inline-block;
+      width: 29px;
+      height: 29px;
+      border-radius: 50%;
+      border: 2px solid rgba(255,255,255, .5);
+      @include transition(border, $animation-time, 0);
+
+      svg {
+        @include absoluteCenter();
+        width: 10px;
+
+        path {
+          fill: $main-white-color;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: $tablet-portrait) {
+
+  .book-now {
+
+    > div {
+      padding-right: 125px;
+      text-align: left;
+    }
+    p {
+      width: 100%;
+      max-width: 685px;
+    }
+    a {
+      @include absoluteCenterY();
+      margin-top: -3px;
+      right: 5px;
+
+      &:hover {
+
+        i {
+          border: 2px solid rgba(255,255,255, 1);
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: $tablet-landscape) {
+
+
+}
+
+@media (min-width: $desktop) {
+
+}
+@media (min-width: $desktop-wide) {
+
+}

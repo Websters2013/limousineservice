@@ -2,12 +2,12 @@
 .btn {
   position: relative;
   display: inline-block;
-  padding: 0 25px;
+  padding: 0 15px;
   border-radius: 45px;
   background: $main-white-color;
   box-shadow: 0 5px 10px 0 rgba(44, 49, 65, 0.09);
-  line-height: 45px;
-  font-size: 15px;
+  line-height: 34px;
+  font-size: 12px;
   color: $main-blue-color;
   text-transform: uppercase;
   @include main-font5();
@@ -59,14 +59,16 @@
 @media (min-width: $desktop) {
 
   .btn {
-
+    padding: 0 25px;
+    line-height: 45px;
+    font-size: 15px;
 
     &:hover {
       background: $main-blue-color;
       color: $main-white-color;
     }
     &_book {
-
+      padding: 0 39px 0 19px;
 
       &:hover {
 
@@ -78,6 +80,7 @@
       }
     }
     &_book-2 {
+      padding: 0 46px 0 25px;
 
       &:hover {
 

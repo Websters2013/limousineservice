@@ -68,7 +68,7 @@
         color: $header-menu-color;
 
         &.active {
-          //border-bottom: 2px solid $header-menu-active-color;
+          opacity: .8;
           cursor: default;
         }
       }
@@ -436,7 +436,7 @@
 
           &:hover,
           &.active {
-            opacity: .85;
+            opacity: .7;
             border-bottom: none;
           }
         }

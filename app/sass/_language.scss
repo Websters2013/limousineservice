@@ -1,0 +1,108 @@
+
+.language {
+  display: inline-block;
+  vertical-align: top;
+  position: absolute;
+  top: 15px;
+  right: 50px;
+  z-index: 1;
+  font-size: 13px;
+  line-height: 26px;
+  text-align: left;
+  cursor: pointer;
+  @include main-font5();
+
+  a{
+    overflow: hidden;
+    display: block;
+    padding: 1px 5px;
+    color: #acadb3;
+    @include transition(color, $animation-time, 0);
+  }
+  &__active {
+    position: relative;
+    display: block;
+    padding: 0 30px 0 0;
+
+    svg {
+      @include absoluteCenterY();
+      right: 0;
+      width: 18px;
+      height: 18px;
+
+      path {
+        fill: #acadb3;
+        @include transition(fill, $animation-time, 0);
+      }
+    }
+  }
+  &__dropdown {
+    display: none;
+    position: relative;
+    top: 5px;
+
+    a {
+      opacity: .8;
+      margin-bottom: 3px;
+      color: $main-blue-color;
+      @include transition(opacity, $animation-time, 0);
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+@media (min-width: $tablet-portrait) {
+
+  .language {
+    top: 29px;
+    right: 65px;
+  }
+}
+
+@media (min-width: $tablet-landscape) {
+
+
+}
+
+@media (min-width: $desktop) {
+
+  .language {
+    top: 14px;
+    right: 26px;
+
+    &__dropdown {
+      display: none;
+      position: absolute;
+      top: 0;
+      right: 100%;
+      white-space: nowrap;
+
+      a {
+        display: inline-block;
+        vertical-align: top;
+      }
+    }
+  }
+}
+@media (min-width: $desktop-wide) {
+
+  .language {
+    top: 14px;
+    right: 26px;
+
+    &__dropdown {
+      display: none;
+      position: relative;
+      top: 5px;
+      right: auto;
+      white-space: normal;
+
+      a {
+        display: block;
+      }
+    }
+  }
+}

@@ -1,0 +1,93 @@
+
+.btn {
+  position: relative;
+  display: inline-block;
+  padding: 0 25px;
+  border-radius: 45px;
+  background: $main-white-color;
+  box-shadow: 0 5px 10px 0 rgba(44, 49, 65, 0.09);
+  line-height: 45px;
+  font-size: 15px;
+  color: $main-blue-color;
+  text-transform: uppercase;
+  @include main-font5();
+  @include transition(all, $animation-time, 0);
+
+  &_book {
+    padding: 0 39px 0 19px;
+    font-size: 13px;
+    line-height: 31px;
+
+    span {
+      @include absoluteCenterY();
+      right: 5px;
+      display: inline-block;
+      width: 23px;
+      height: 23px;
+      padding: 3px 0 0 0;
+      border-radius: 50%;
+      border: 2px solid $main-blue-color;
+      background: $main-blue-color;
+      font-size: 12px;
+      line-height: 1;
+      text-align: center;
+      color: $main-white-color;
+      @include transition(all, $animation-time, 0)
+    }
+  }
+  &_book-2 {
+    padding: 0 46px 0 25px;
+    font-size: 15px;
+    line-height: 45px;
+
+    span {
+      right: 8px;
+      width: 27px;
+      height: 27px;
+      padding: 6px 0 0 0;
+      background: transparent;
+      color: $main-blue-color;
+    }
+  }
+}
+
+@media (min-width: $tablet-portrait) {
+
+
+}
+
+@media (min-width: $desktop) {
+
+  .btn {
+
+
+    &:hover {
+      background: $main-blue-color;
+      color: $main-white-color;
+    }
+    &_book {
+
+
+      &:hover {
+
+        span {
+          border: 2px solid $main-white-color;
+          background: $main-white-color;
+          color: $main-blue-color;
+        }
+      }
+    }
+    &_book-2 {
+
+      &:hover {
+
+        span {
+          border: 2px solid $main-white-color;
+          background: transparent;
+          color: $main-white-color;
+        }
+      }
+    }
+  }
+
+}

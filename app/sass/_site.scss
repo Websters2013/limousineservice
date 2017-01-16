@@ -419,6 +419,15 @@
         margin-right: 32px;
         text-align: right;
       }
+      &_dark {
+
+        .site__menu-item {
+
+          a {
+            color: #4e5876;
+          }
+        }
+      }
       .site__menu-item {
         vertical-align: top;
         display: inline-block;

@@ -84,15 +84,17 @@
       font-size: 28px;
     }
     &__list-wrap {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 30px;
+      display: block;
+      @include justify();
+      margin-bottom: 14px;
 
       &:last-child {
         margin-bottom: 0;
       }
     }
     &__list-inner {
+      display: inline-block;
+      vertical-align: top;
       padding-bottom: 36.3%;
 
       &_small {
@@ -238,19 +240,17 @@
     }
   }
 }
-
 @media (min-width: $tablet-landscape) {
 
 
 }
-
 @media (min-width: $desktop) {
 
   .proposal {
-    padding: 108px 0 145px;
+    padding: 108px 0 129px;
 
     &__head {
-      margin-bottom: 77px;
+      margin-bottom: 69px;
     }
     &__title {
       font-size: 38px;
@@ -283,7 +283,4 @@
       }
     }
   }
-}
-@media (min-width: $desktop-wide) {
-
 }

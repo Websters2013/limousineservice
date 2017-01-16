@@ -31,6 +31,14 @@ var paths = {
                 'app/js/jquery.main.js',
                 'app/js/jquery.animation.js'
             ]
+        },
+        {
+            dist: 'booking.min.js',
+            contains: [
+                'app/js/jquery.main.js',
+                'app/js/jquery.animation.js',
+                'app/js/jquery.booking.js'
+            ]
         }
     ],
     vendorScripts: 'app/js/vendors/**/*.js',

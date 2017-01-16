@@ -15,6 +15,138 @@
 
         } );
 
+        //slider--------->
+        function testGallery(){
+            var slideItems = $('li'),
+                activeIndex = 0,
+                next = $('<div class="next">'),
+                prev = $('<div class="prev">'),
+                action = false,
+                n = slideItems.length;
+
+            $('.content__gallery').append(next);
+            $('.content__gallery').append(prev);
+
+            if(slideItems.length==1){
+                next.removeClass('next');
+                prev.removeClass('prev');
+            }
+
+            slideItems.eq(activeIndex).css({left: 0});
+
+            next.click(function(){
+                if(!action){
+                    var nextIndex = activeIndex + 1;
+
+                    action = true;
+
+                    if(nextIndex == slideItems.length){
+                        nextIndex = 0;
+                    }
+
+                    point.removeClass('active');
+                    point.eq(nextIndex).addClass('active');
+
+                    var activeElem = slideItems.eq(activeIndex),
+                        nextElem = slideItems.eq(nextIndex);
+
+                    activeElem.animate({left: '-100%'},1000);
+                    nextElem.css({left: '100%'});
+                    nextElem.animate({left: 0},{
+                        duration: 1000,
+                        complete: function(){
+                            activeIndex = nextIndex;
+                            action = false;
+                        }
+                    });
+                }
+            });
+
+            prev.click(function(){
+                if(!action){
+                    var prevIndex = activeIndex -1;
+
+                    action = true;
+
+                    if(prevIndex == - slideItems.length){
+                        prevIndex = 0;
+                    }
+
+                    point.removeClass('active');
+                    point.eq(prevIndex).addClass('active');
+
+                    var activeElem = slideItems.eq(activeIndex),
+                        prevElem = slideItems.eq(prevIndex);
+
+                    activeElem.animate({left: '100%'},1000);
+                    prevElem.css({left: '-100%'});
+                    prevElem.animate({left: 0},{
+                        duration: 1000,
+                        complete: function(){
+                            activeIndex = prevIndex;
+                            action = false;
+                        }
+                    });
+                }
+            });
+
+            var list = $('<ul class="slide-list__inner"></ul>'),
+                i = null;
+
+            $('.content__gallery').append(list);
+
+            for (i=0; i<n; i++) {
+                list.append('<li/>');
+            }
+
+            var point = list.find('li');
+            point.eq(activeIndex).addClass('active');
+
+            //---------------------------------------------------
+            point.click(function(){
+                if(!action){
+                    var curePoint = $(this),
+                        nextIndex = curePoint.index(),
+                        curIndex = list.find('.active').index();
+
+                    if(!curePoint.hasClass('active')){
+                        action = true ;
+
+                        var activeElem = slideItems.eq(activeIndex),
+                            nextElem = slideItems.eq(nextIndex);
+
+                        point.removeClass('active');
+                        curePoint.addClass('active');
+
+                        if(nextIndex<curIndex){
+                            activeElem.animate({left: '100%'},1000);
+                            nextElem.css({left: '-100%'});
+                            nextElem.animate({left: 0},{
+                                duration: 1000,
+                                complete: function(){
+                                    activeIndex = nextIndex;
+                                    action = false;
+                                }
+                            });
+
+                        } else {
+                            activeElem.animate({left: '-100%'},1000);
+                            nextElem.css({left: '100%'});
+                            nextElem.animate({left: 0},{
+                                duration: 1000,
+                                complete: function(){
+                                    activeIndex = nextIndex;
+                                    action = false;
+                                }
+                            });
+                        }
+                    }
+                }
+            });
+        }
+        testGallery();
+        ///slider
+
     });
 
     var Language = function (obj) {

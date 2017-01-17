@@ -9,6 +9,23 @@
   svg {
     width: 100%;
     height: auto;
+
+    path,
+    line {
+      @include transition(all, $animation-time, 0)
+    }
+  }
+  &_white {
+
+    svg {
+      path,
+      line {
+        fill: $main-white-color;
+      }
+      line {
+        stroke: $main-white-color;
+      }
+    }
   }
 
 }

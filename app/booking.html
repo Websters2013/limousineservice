@@ -12,6 +12,7 @@
 
     <link rel="stylesheet" href="css/booking-page.css">
     <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/jquery.datetimepicker.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
 
 </head>
@@ -355,7 +356,23 @@
             <!--/booking__head-->
 
             <!--booking__form-->
-            <div class="booking__form">
+            <form action="php/form.php" method="post" class="booking__form">
+
+                <!--preloader-->
+                <div class="preloader">
+
+                    <!--preloader__wrap-->
+                    <div class="preloader__wrap">
+                        <div class="preloader__item"></div>
+                        <div class="preloader__item"></div>
+                        <div class="preloader__item"></div>
+                        <div class="preloader__item"></div>
+                        <div class="preloader__item"></div>
+                    </div>
+                    <!--/preloader__wrap-->
+
+                </div>
+                <!--/preloader-->
 
                 <!--site__centered-->
                 <div class="site__centered">
@@ -380,7 +397,7 @@
                                         <!--nice-radio-tile-->
                                         <div class="nice-radio-tile nice-radio-tile_big">
 
-                                            <input id="airport" name="Select your service" type="radio">
+                                            <input id="airport" name="select-service" value="airport" type="radio">
 
                                             <label for="airport">
                                                 <i>
@@ -408,7 +425,7 @@
                                         <!--nice-radio-tile-->
                                         <div class="nice-radio-tile nice-radio-tile_big">
 
-                                            <input id="midi" name="Select your service" type="radio">
+                                            <input id="midi" name="select-service" value="midi" type="radio">
 
                                             <label for="midi">
                                                 <i>
@@ -434,7 +451,7 @@
                                         <!--nice-radio-tile-->
                                         <div class="nice-radio-tile nice-radio-tile_big">
 
-                                            <input id="meetings" name="Select your service" type="radio">
+                                            <input id="meetings" name="select-service" value="meetings" type="radio">
 
                                             <label for="meetings">
                                                 <i>
@@ -482,7 +499,7 @@
                                         <!--nice-radio-tile-->
                                         <div class="nice-radio-tile nice-radio-tile_big">
 
-                                            <input id="driver" name="Select your service" type="radio">
+                                            <input id="driver" name="select-service" value="driver" type="radio">
 
                                             <label for="driver">
                                                 <i>
@@ -504,7 +521,7 @@
                                         <!--nice-radio-tile-->
                                         <div class="nice-radio-tile nice-radio-tile_big">
 
-                                            <input id="trip" name="Select your service" type="radio">
+                                            <input id="trip" name="select-service" value="trip" type="radio">
 
                                             <label for="trip">
                                                 <i>
@@ -541,7 +558,7 @@
                                         <!--nice-radio-tile-->
                                         <div class="nice-radio-tile">
 
-                                            <input id="1-3_pass" name="Number of passengers" type="radio">
+                                            <input id="1-3_pass" name="number-passengers" value="1-3" type="radio">
 
                                             <label for="1-3_pass">
                                                 1 to 3 passengers
@@ -553,7 +570,7 @@
                                         <!--nice-radio-tile-->
                                         <div class="nice-radio-tile">
 
-                                            <input id="3-7_pass" name="Number of passengers" type="radio">
+                                            <input id="3-7_pass" name="number-passengers" value="3-7" type="radio">
 
                                             <label for="3-7_pass">
                                                 3 to 7 passengers
@@ -565,7 +582,7 @@
                                         <!--nice-radio-tile-->
                                         <div class="nice-radio-tile">
 
-                                            <input id="8-20_pass" name="Number of passengers" type="radio">
+                                            <input id="8-20_pass" name="number-passengers" value="8-20" type="radio">
 
                                             <label for="8-20_pass">
                                                 8 to 20 passengers
@@ -577,7 +594,7 @@
                                         <!--nice-radio-tile-->
                                         <div class="nice-radio-tile">
 
-                                            <input id="20-60_pass" name="Number of passengers" type="radio">
+                                            <input id="20-60_pass" name="number-passengers" value="20-60" type="radio">
 
                                             <label for="20-60_pass">
                                                 20 to 60 passengers
@@ -605,7 +622,7 @@
                                         <!--nice-radio-tile-->
                                         <div class="nice-radio-tile nice-radio-tile_middle">
 
-                                            <input id="business-class" name="Type of car" type="radio">
+                                            <input id="business-class" name="type-car" value="business-class" type="radio">
 
                                             <label for="business-class">
                                                 Business standard car (class E, BMW 5)
@@ -617,7 +634,7 @@
                                         <!--nice-radio-tile-->
                                         <div class="nice-radio-tile nice-radio-tile_middle">
 
-                                            <input id="first-class" name="Type of car" type="radio">
+                                            <input id="first-class" name="type-car" value="first-class" type="radio">
 
                                             <label for="first-class">
                                                 First class car
@@ -630,7 +647,7 @@
                                         <!--nice-radio-tile-->
                                         <div class="nice-radio-tile nice-radio-tile_middle">
 
-                                            <input id="vip" name="Type of car" type="radio">
+                                            <input id="vip" name="type-car" value="vip" type="radio">
 
                                             <label for="vip">
                                                 Van VIP (V-Class)
@@ -642,7 +659,7 @@
                                         <!--nice-radio-tile-->
                                         <div class="nice-radio-tile nice-radio-tile_middle">
 
-                                            <input id="bus" name="Type of car" type="radio">
+                                            <input id="bus" name="type-car" value="bus" type="radio">
 
                                             <label for="bus">
                                                 Mini-bus & Bus
@@ -675,22 +692,25 @@
 
                                         <fieldset>
 
-                                            <div>
-                                                <input id="departure-date" type="text" name="departure-date">
-                                                <label for="departure-date"><span>Address & street number</span></label>
+                                            <!--booking__form-datetime-->
+                                            <div class="booking__form-datetime">
+                                                <input id="departure-date" class="datetimepicker" type="text" name="departure-date" required>
+                                                <label for="departure-date"><span>Date of departure</span></label>
+                                                <i class="fa fa-calendar" aria-hidden="true"></i>
                                             </div>
+                                            <!--/booking__form-datetime-->
 
                                         </fieldset>
 
                                         <fieldset>
 
                                             <div>
-                                                <input id="departure-address" type="text" name="departure-address">
+                                                <input id="departure-address" type="text" name="departure-address" required>
                                                 <label for="departure-address"><span>Address & street number</span></label>
                                             </div>
 
                                             <div>
-                                                <input id="departure-district" type="text" name="departure-district">
+                                                <input id="departure-district" type="text" name="departure-district" required>
                                                 <label for="departure-district"><span>Zipcode & district</span></label>
                                             </div>
 
@@ -708,19 +728,22 @@
 
                                         <fieldset>
 
-                                            <div>
-                                                <input id="arrival-date" type="text" name="arrival-date">
-                                                <label for="arrival-date"><span>Address & street number</span></label>
+                                            <!--booking__form-datetime-->
+                                            <div class="booking__form-datetime">
+                                                <input id="arrival-date" class="datetimepicker" type="text" name="arrival-date" required>
+                                                <label for="arrival-date"><span>Date of arrival</span></label>
+                                                <i class="fa fa-calendar" aria-hidden="true"></i>
                                             </div>
+                                            <!--/booking__form-datetime-->
 
                                         </fieldset>
 
-                                        <fieldset>
+                                        <fieldset class="booking__form-radio-wrap">
 
                                             <!--nice-radio-->
                                             <div class="nice-radio">
 
-                                                <input id="copy-address" name="source-address" type="radio">
+                                                <input id="copy-address" name="source-address" value="source-address" type="radio">
                                                 <label for="copy-address"><span>Copy departure address</span></label>
 
                                             </div>
@@ -729,7 +752,7 @@
                                             <!--nice-radio-->
                                             <div class="nice-radio">
 
-                                                <input id="flexible-address" name="source-address" type="radio">
+                                                <input id="flexible-address" value="flexible-address" name="source-address" type="radio">
                                                 <label for="flexible-address"><span>Flexible addresses</span></label>
 
                                             </div>
@@ -740,12 +763,12 @@
                                         <fieldset>
 
                                             <div>
-                                                <input id="arrival-address" type="text" name="arrival-address">
+                                                <input id="arrival-address" type="text" name="arrival-address" required>
                                                 <label for="arrival-address"><span>Address & street number</span></label>
                                             </div>
 
                                             <div>
-                                                <input id="arrival-district" type="text" name="arrival-district">
+                                                <input id="arrival-district" type="text" name="arrival-district" required>
                                                 <label for="arrival-district"><span>Zipcode & district</span></label>
                                             </div>
 
@@ -773,23 +796,23 @@
                                     <fieldset>
 
                                         <div>
-                                            <input id="name" type="text" name="name">
+                                            <input id="name" type="text" name="name" required>
                                             <label for="name"><span>Charles Crespinet</span></label>
                                         </div>
 
                                         <div>
-                                            <input id="email" type="email" name="email">
+                                            <input id="email" type="email" name="email" required>
                                             <label for="email"><span>Email</span></label>
                                         </div>
 
                                         <div>
-                                            <input id="phone" type="tel" name="phone">
+                                            <input id="phone" type="text" name="phone" required>
                                             <label for="phone"><span>Phone number</span></label>
                                         </div>
 
                                         <div>
-                                            <input id="company" type="text" name="company">
-                                            <label for="company"><span>Phone number</span></label>
+                                            <input id="company" type="text" name="company" required>
+                                            <label for="company"><span>Company</span></label>
                                         </div>
 
                                         <div>
@@ -827,12 +850,19 @@
 
                         </div>
 
-                        <div class="swiper-button-next btn">
+                        <div class="swiper-button-next disabled btn">
 
                             Continue
                             <i class="fa fa-angle-right" aria-hidden="true"></i>
 
                         </div>
+
+                        <!--btn-->
+                        <button type="submit" class="booking__form-submit btn btn_2">
+                            Validate Booking
+                            <i class="fa fa-angle-right" aria-hidden="true"></i>
+                        </button>
+                        <!--/btn-->
 
                     </div>
                     <!--/site__centered-->
@@ -840,7 +870,7 @@
                 </div>
                 <!--/booking__form-controls-->
 
-            </div>
+            </form>
             <!--/booking__form-->
 
         </div>
@@ -914,7 +944,12 @@
 
 <script src="js/vendors/jquery-2.2.1.min.js"></script>
 <script src="js/vendors/swiper.jquery.min.js"></script>
+<script src="js/vendors/jquery.datetimepicker.full.min.js"></script>
 <script src="js/booking.min.js"></script>
+
+<script>
+
+</script>
 
 
 </body>

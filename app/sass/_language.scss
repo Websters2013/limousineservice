@@ -12,6 +12,18 @@
   cursor: pointer;
   @include main-font5();
 
+  &_white {
+
+    a {
+      color: $main-white-color !important;
+    }
+    svg {
+
+      path {
+        fill: $main-white-color !important;
+      }
+    }
+  }
   a{
     overflow: hidden;
     display: block;

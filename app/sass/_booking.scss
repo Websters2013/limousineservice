@@ -194,7 +194,6 @@
         letter-spacing: 0.3px;
         color: $main-blue-color;
         font-weight: 700;
-        //margin-top: -16px;
         left: 12px;
       }
       span {
@@ -242,17 +241,22 @@
   }
 
   &__form-datetime {
+
     input {
       padding-right: 40px;
+
+      &:focus + label + i {
+        color: $main-blue-color;
+      }
     }
     i {
       @include absoluteCenterY();
       right: 17px;
       pointer-events: none;
       font-size: 16px;
+      @include transition(color, $animation-time, 0);
     }
   }
-
   &__message {
     opacity: 0;
     visibility: hidden;
@@ -395,7 +399,6 @@
         }
       }
     }
-
     &:hover {
 
       i {
@@ -581,7 +584,6 @@
         }
       }
     }
-
     &__message-title {
       margin-bottom: 18px;
       font-size: 48px;

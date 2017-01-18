@@ -28,7 +28,7 @@
     overflow: hidden;
     display: block;
     padding: 1px 5px;
-    color: #acadb3;
+    color: $language-color;
     @include transition(color, $animation-time, 0);
   }
   &__active {
@@ -43,7 +43,7 @@
       height: 18px;
 
       path {
-        fill: #acadb3;
+        fill: $language-color;
         @include transition(fill, $animation-time, 0);
       }
     }
@@ -56,7 +56,7 @@
     a {
       opacity: .85;
       margin-bottom: 3px;
-      color: #3a85ff;
+      color: $language-dropdown-color;
       @include transition(opacity, $animation-time, 0);
 
       &:hover {

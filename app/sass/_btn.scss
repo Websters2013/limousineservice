@@ -71,6 +71,20 @@
       background: $main-blue-color;
       color: $main-white-color;
     }
+    &_2 {
+
+      &:hover {
+        color: $main-blue-color;
+        background: $main-white-color;
+      }
+    }
+    &_3 {
+
+      &:hover {
+        background: #28c776;
+        color: $main-white-color;
+      }
+    }
     &_book {
       padding: 0 39px 0 19px;
       font-size: 13px;

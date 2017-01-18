@@ -88,7 +88,11 @@
   &__form-controls {
     padding: 50px 0 44px;
     background: #f0f1f5;
+    @include transition(background, $animation-time, 0);
 
+    &.required {
+      background: $main-blue-color;
+    }
     > div {
       display: flex;
       justify-content: space-between;
@@ -239,7 +243,6 @@
       visibility: visible;
     }
   }
-
   &__form-datetime {
 
     input {
@@ -658,6 +661,10 @@
         top: 7px;
         width: 193px;
       }
+    }
+    &__form-item_centered {
+      display: flex;
+      align-items: center;
     }
     &__form-inner {
       width: 920px;

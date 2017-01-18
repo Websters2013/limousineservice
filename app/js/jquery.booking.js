@@ -28,6 +28,7 @@
         var _self = this,
             _obj = obj,
             _form = _obj.find( '.booking__form' ),
+            _controlPanel = _form.find( '.booking__form-controls' ),
             _cloneSrcInput = _obj.find( 'input[name=source-address]' ),
             _submitBtn = _form.find( '.booking__form-submit' ),
             _swiperContainer = _obj.find('.swiper-container'),
@@ -107,7 +108,7 @@
                         var activeSlide = $('.swiper-slide-active'),
                             activeIndex = activeSlide.index();
 
-                        _window.scrollToTop();
+                        _window.scrollToTop( 0 );
 
                         _setStatus( activeIndex );
 
@@ -123,11 +124,13 @@
 
                         if ( activeSlide.hasClass( 'required' ) ) {
 
-                            _nextBtn.removeClass( 'disabled' )
+                            _nextBtn.removeClass( 'disabled' );
+                            _controlPanel.addClass( 'required' );
 
                         } else {
 
-                            _nextBtn.addClass( 'disabled' )
+                            _nextBtn.addClass( 'disabled' );
+                            _controlPanel.removeClass( 'required' );
 
                         }
 
@@ -139,7 +142,8 @@
                 var curStep = _steps.eq( index ),
                     inputs = curStep.find( 'input' ),
                     requaredInputs = inputs.filter( '[required]' ),
-                    requaredLength = 0;
+                    requaredLength = 0,
+                    scrollPosition = _controlPanel.offset().top -  _window.height() + _controlPanel.innerHeight();
 
                 if ( index == 0 ) {
 
@@ -156,13 +160,16 @@
 
                     if ( requaredLength == 3 ) {
 
-                        curStep.addClass( 'required' )
+                        curStep.addClass( 'required' );
+                        _controlPanel.addClass( 'required' );
+
+                        _window.scrollToTop( scrollPosition );
 
                     }
 
                 } else {
 
-                    inputs.each( function () {
+                    requaredInputs.each( function () {
 
                         var curInput = $( this );
 
@@ -174,9 +181,13 @@
 
                     } );
 
+                    console.log('requaredInputs',requaredInputs.length, 'requaredLength', requaredLength);
+
                     if ( requaredLength >= requaredInputs.length) {
 
-                        curStep.addClass( 'required' )
+                        curStep.addClass( 'required' );
+                        _controlPanel.addClass( 'required' );
+                        _window.scrollToTop( scrollPosition );
 
                     }
                 }
@@ -202,6 +213,8 @@
 
                     arrivalDistrict.val( departurelDistrict.val() );
                     arrivalAddress.val( departurelAddress.val() );
+
+                    _checkStep( arrivalDistrict.parents( '.booking__form-item' ).index() );
 
                 }, 200);
 
@@ -314,7 +327,7 @@
                     success: function( msg ){
 
                         _obj.append( msg );
-                        _window.scrollToTop();
+                        _window.scrollToTop( 0 );
                         _preloader.removeClass( 'loading' );
 
                         setTimeout(function () {
@@ -339,8 +352,9 @@
         //public properties
 
         //public methods
-        _window.scrollToTop = function () {
-            var stopScrollPosition = 0;
+        _window.scrollToTop = function ( stopScrollPosition ) {
+
+            // var stopScrollPosition = 0;
 
             _scroller.animate({
                 scrollTop: stopScrollPosition

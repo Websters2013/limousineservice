@@ -111,7 +111,7 @@
       @include absolutePosition();
       height: auto;
       margin-bottom: 0;
-      box-shadow: 10px 10px 20px rgba(15,107,255, 0);
+      box-shadow: 0 10px 20px rgba(15,107,255, 0);
       @include transition(box-shadow, $animation-time, .05);
 
       &:after {
@@ -179,7 +179,7 @@
       }
       &:hover,
       &.animation:hover {
-        box-shadow: 10px 10px 20px rgba(15,107,255, .2);
+        box-shadow: 0 10px 20px rgba(15,107,255, .2);
 
         &:after {
           opacity: 1;

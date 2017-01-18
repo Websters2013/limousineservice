@@ -1,6 +1,6 @@
 
 .book-now {
-  padding: 129px 0 54px;
+  padding: 129px 0 34px;
   background: $main-blue-color;
   color: $main-white-color;
 
@@ -13,7 +13,7 @@
     margin-bottom: 20px;
     font-size: 14px;
     line-height: 17px;
-    color: $main-white-color;
+    color: #e5e6e9;
     @include main-font6();
   }
   a {
@@ -59,6 +59,8 @@
     p {
       width: 100%;
       max-width: 685px;
+      font-size: 17px;
+      line-height: 24px;
     }
     a {
       @include absoluteCenterY();
@@ -76,7 +78,6 @@
 }
 
 @media (min-width: $tablet-landscape) {
-
 
 }
 

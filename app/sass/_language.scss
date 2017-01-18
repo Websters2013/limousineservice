@@ -54,9 +54,9 @@
     top: 5px;
 
     a {
-      opacity: .8;
+      opacity: .85;
       margin-bottom: 3px;
-      color: $main-blue-color;
+      color: #3a85ff;
       @include transition(opacity, $animation-time, 0);
 
       &:hover {

@@ -702,15 +702,15 @@
 
                                         </fieldset>
 
-                                        <fieldset>
+                                        <fieldset class="autocomplete">
 
                                             <div>
-                                                <input id="departure-address" type="text" name="departure-address" required  autocomplete="off">
+                                                <input class="autocomplete__field" id="departure-address" type="text" name="departure-address" required>
                                                 <label for="departure-address"><span>Address & street number</span></label>
                                             </div>
 
                                             <div>
-                                                <input id="departure-district" type="text" name="departure-district" required  autocomplete="off">
+                                                <input class="autocomplete__district" id="departure-district"  type="text" name="departure-district" required autocomplete="off">
                                                 <label for="departure-district"><span>Zipcode & district</span></label>
                                             </div>
 
@@ -760,15 +760,15 @@
 
                                         </fieldset>
 
-                                        <fieldset>
+                                        <fieldset class="autocomplete">
 
                                             <div>
-                                                <input id="arrival-address" type="text" name="arrival-address" required autocomplete="off">
+                                                <input class="autocomplete__field" id="arrival-address" type="text" name="arrival-address" required autocomplete="off">
                                                 <label for="arrival-address"><span>Address & street number</span></label>
                                             </div>
 
                                             <div>
-                                                <input id="arrival-district" type="text" name="arrival-district" required autocomplete="off">
+                                                <input class="autocomplete__district" id="arrival-district" type="text" name="arrival-district" required autocomplete="off">
                                                 <label for="arrival-district"><span>Zipcode & district</span></label>
                                             </div>
 
@@ -945,11 +945,9 @@
 <script src="js/vendors/jquery-2.2.1.min.js"></script>
 <script src="js/vendors/swiper.jquery.min.js"></script>
 <script src="js/vendors/jquery.datetimepicker.full.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCzQBHDPzqd6nR0Tm3OnJ0LxE3mUjEBAtY&language=en&libraries=places"></script>
 <script src="js/booking.min.js"></script>
 
-<script>
-
-</script>
 
 
 </body>

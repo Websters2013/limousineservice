@@ -163,6 +163,15 @@
           }
         }
       }
+      &::-webkit-input-placeholder {
+        color: transparent;
+      }
+      &:-moz-placeholder {
+        color: transparent;
+      }
+      &.placeholder {
+        color: transparent;
+      }
     }
     textarea {
       height: 183px;

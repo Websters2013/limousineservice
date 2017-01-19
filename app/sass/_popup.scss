@@ -43,6 +43,7 @@
 
   &__close {
     position: absolute;
+    z-index: 2;
     display: block;
     top: 20px;
     right: 20px;
@@ -91,6 +92,20 @@
   &__video {
     padding: 0 !important;
 
+    video {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+    video::-webkit-media-controls-panel {
+      background: transparent;
+    }
+    video::-webkit-media-controls-enclosure {
+      background: transparent;
+    }
+    video::-webkit-media-controls-volume-slider {
+      background: $main-blue-color;
+    }
     img {
       display: block;
       width: 100%;

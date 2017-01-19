@@ -205,18 +205,21 @@
                     departurelAddress = _obj.find( 'input[name=departure-address]' ),
                     departurelDistrict = _obj.find( 'input[name=departure-district]' );
 
+                if ( departurelDistrict.val() !== '' || departurelAddress.val() !== '' ) {
 
-                arrivalAddress.next('label').addClass('active');
-                arrivalDistrict.next('label').addClass('active');
+                    arrivalAddress.next('label').addClass('active');
+                    arrivalDistrict.next('label').addClass('active');
 
-                setTimeout(function () {
+                    setTimeout(function () {
 
-                    arrivalDistrict.val( departurelDistrict.val() );
-                    arrivalAddress.val( departurelAddress.val() );
+                        arrivalDistrict.val( departurelDistrict.val() );
+                        arrivalAddress.val( departurelAddress.val() );
 
-                    _checkStep( arrivalDistrict.parents( '.booking__form-item' ).index() );
+                        _checkStep( arrivalDistrict.parents( '.booking__form-item' ).index() );
 
-                }, 200);
+                    }, 200);
+
+                }
 
             },
             _setStatus = function ( index ) {

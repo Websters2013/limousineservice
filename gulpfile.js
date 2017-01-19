@@ -47,7 +47,8 @@ var paths = {
     images: 'app/img/**/*',
     pictures: 'app/pic/**/*',
     php: 'app/php/**/*',
-    fonts: 'app/fonts/**/*'
+    fonts: 'app/fonts/**/*',
+    video: 'app/video/**/*'
 };
 
 
@@ -84,6 +85,12 @@ gulp.task('fonts', function () {
     return gulp.src(paths.fonts, {
         base: 'app/fonts'
     }).pipe(gulp.dest('dist/fonts'));
+});
+
+gulp.task('video', function () {
+    return gulp.src(paths.video, {
+        base: 'app/video'
+    }).pipe(gulp.dest('dist/video'));
 });
 
 gulp.task('php', function () {
@@ -131,6 +138,7 @@ gulp.task('watch', function() {
     gulp.watch(paths.images,    ['images',  browserSync.reload]);
     gulp.watch(paths.pictures,    ['pictures',  browserSync.reload]);
     gulp.watch(paths.fonts,    ['fonts']);
+    gulp.watch(paths.fonts,    ['video']);
     gulp.watch(paths.php,    ['php']);
     gulp.watch(paths.styles,    ['styles']);
     gulp.watch(paths.vendorStyles,    [ 'vendorStyles' ]);
@@ -138,7 +146,7 @@ gulp.task('watch', function() {
 });
 
 function serve() {
-    return run('styles', 'scripts', 'vendorScripts', 'vendorStyles', 'php', 'fonts',  'images', 'pictures', 'views', 'serve');
+    return run('styles', 'video', 'scripts', 'vendorScripts', 'vendorStyles', 'php', 'fonts',  'images', 'pictures', 'views', 'serve');
 }
 
 gulp.task('default', ['clean'], serve());

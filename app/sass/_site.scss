@@ -171,10 +171,20 @@
     }
   }
   &__hero {
+    position: relative;
     padding: 28.85% 15px 27.1%;
     background-size: cover;
     background-position: center;
     text-align: center;
+  }
+  &__hero-video {
+    position: absolute;
+    min-height: 100%;
+    min-width: 100%;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
   }
   &__hero-title {
     margin-bottom: 29px;

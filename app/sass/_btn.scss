@@ -22,8 +22,19 @@
     font-size: 13px;
     line-height: 31px;
 
+    &:before {
+      @include absoluteCenterY();
+      right: 5px;
+      width: 23px;
+      height: 23px;
+      border-radius: 23px;
+      background: $main-blue-color;
+      @include transition(all, $animation-time, .05);
+      content: '';
+    }
     span {
       @include absoluteCenterY();
+      z-index: 4;
       right: 5px;
       display: inline-block;
       width: 23px;
@@ -38,18 +49,29 @@
       color: $main-white-color;
       @include transition(all, $animation-time, .05)
     }
+    div {
+      position: relative;
+      z-index: 3;
+    }
   }
   &_book-2 {
     padding: 0 46px 0 25px;
     font-size: 15px;
     line-height: 45px;
 
+    &:before {
+      right: 8px;
+      width: 27px;
+      height: 27px;
+      border-radius: 27px;
+    }
     span {
+      z-index: 4;
       right: 8px;
       width: 27px;
       height: 27px;
       padding: 6px 0 0 0;
-      background: transparent;
+      background: $main-white-color;
       color: $main-blue-color;
     }
   }
@@ -92,10 +114,10 @@
 
       &:hover {
 
-        span {
-          border: 2px solid $main-white-color;
-          background: $main-white-color;
-          color: $main-blue-color;
+        &:before {
+          width: 100%;
+          height: 100%;
+          right: 0;
         }
       }
     }
@@ -106,10 +128,13 @@
 
       &:hover {
 
+        &:before {
+          background: $main-blue-color;
+        }
         span {
-          border: 2px solid $main-white-color;
-          background: transparent;
-          color: $main-white-color;
+          //border: 2px solid $main-white-color;
+          background: $main-white-color;
+          color: $main-blue-color;
         }
       }
     }

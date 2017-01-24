@@ -57,8 +57,17 @@
 
                 _obj.removeClass( 'popup_opened' );
                 _obj.addClass( 'popup_hide' );
+
                 if ( _wrap.hasClass( 'popup__wrap_top' ) ) {
                     _wrap.removeClass( 'popup__wrap_top' )
+                }
+
+                if ( _contents.hasClass('popup__video') ) {
+
+                    console.log('popup__video');
+
+                    _contents.find( 'video' ).get(0).pause()
+
                 }
 
                 _timer = setTimeout( function(){

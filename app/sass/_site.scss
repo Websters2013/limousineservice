@@ -196,6 +196,8 @@
   &__hero-play {
     display: inline-block;
     color: $main-white-color;
+    -webkit-perspective: 1000px;
+    perspective: 1000px;
 
     span {
       visibility: hidden;
@@ -206,8 +208,8 @@
       letter-spacing: 1px;
       @include main-font5();
       text-transform: uppercase;
-      -webkit-transform: translateY(10px);
-      transform: translateY(10px);
+      -webkit-transform: translateY(15px) rotateX(-90deg) scale(.8);
+      transform: translateY(15px) rotateX(-90deg) scale(.8);
       @include transition(all, $animation-time, 0)
     }
     &:hover {
@@ -219,8 +221,8 @@
       span {
         opacity: 1;
         visibility: visible;
-        -webkit-transform: translateY(0px);
-        transform: translateY(0px);
+        -webkit-transform: translateY(0px) rotateX(0deg) scale(1);
+        transform: translateY(0px) rotateX(0deg) scale(1);
       }
     }
   }
@@ -346,7 +348,7 @@
       }
     }
     &__hero {
-      padding: 18.85% 15px 17.1%;
+      padding: 18.85% 15px 16.65%;
     }
     &__hero-title {
       opacity: 0;

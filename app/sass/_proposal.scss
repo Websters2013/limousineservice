@@ -33,8 +33,6 @@
     height: 100px;
     width: 100%;
     margin-bottom: 20px;
-    //border-radius: 4px;
-    //backface-visibility: hidden;
   }
   &__item-wrap {
     overflow: hidden;
@@ -43,8 +41,7 @@
     height: 100%;
     top: 0;
     left: 0;
-    border-radius: 5px;
-    //backface-visibility: hidden;
+    border-radius: 7px;
   }
   &__item-pic {
     @include absolutePosition();

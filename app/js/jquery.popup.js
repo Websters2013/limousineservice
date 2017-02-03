@@ -35,7 +35,7 @@
             },
             _addVideoFrame = function ( url ) {
 
-                _videoPopup.append( '<iframe src="'+url+'" frameborder="0" allowfullscreen></iframe>' )
+                _videoPopup.append( '<iframe src="'+url+'?autoplay=1" frameborder="0" allowfullscreen></iframe>' )
 
             },
             _getScrollWidth = function (){

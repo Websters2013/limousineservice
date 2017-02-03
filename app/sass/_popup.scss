@@ -52,6 +52,10 @@
     cursor: pointer;
     @include transition(transform, $animation-time, 0);
 
+    &_video {
+      top: -25px;
+    }
+
     &:after,
     &:before {
       @include absoluteCenterY();
@@ -90,26 +94,17 @@
   }
 
   &__video {
-    padding: 0 !important;
+    background: transparent;
+    width: 100%;
+    max-width: 1470px;
+    padding-bottom: 45%;
 
-    video {
-      display: block;
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
       width: 100%;
-      height: auto;
-    }
-    video::-webkit-media-controls-panel {
-      background: transparent;
-    }
-    video::-webkit-media-controls-enclosure {
-      background: transparent;
-    }
-    video::-webkit-media-controls-volume-slider {
-      background: $main-blue-color;
-    }
-    img {
-      display: block;
-      width: 100%;
-      height: auto;
+      height: 100%;
     }
   }
 }

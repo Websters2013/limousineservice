@@ -22,6 +22,7 @@
             _contents = _obj.find( '.popup__content' ),
             _scrollConteiner = $( 'html' ),
             _window = $( window ),
+            _videoPopup = $( '.popup__video' ),
             _timer = setTimeout( function(){}, 1 );
 
         //private methods
@@ -31,6 +32,11 @@
                 } else {
                     _wrap.css( { top: 0 } );
                 }
+            },
+            _addVideoFrame = function ( url ) {
+
+                _videoPopup.append( '<iframe src="'+url+'" frameborder="0" allowfullscreen></iframe>' )
+
             },
             _getScrollWidth = function (){
                 var scrollDiv = document.createElement( 'div'),
@@ -58,18 +64,6 @@
                 _obj.removeClass( 'popup_opened' );
                 _obj.addClass( 'popup_hide' );
 
-                if ( _wrap.hasClass( 'popup__wrap_top' ) ) {
-                    _wrap.removeClass( 'popup__wrap_top' )
-                }
-
-                if ( _contents.hasClass('popup__video') ) {
-
-                    console.log('popup__video');
-
-                    _contents.find( 'video' ).get(0).pause()
-
-                }
-
                 _timer = setTimeout( function(){
 
                     _obj.css ({
@@ -78,6 +72,12 @@
 
                     _obj.removeClass( 'popup_hide' );
                 }, 300 );
+
+                if ( _contents.hasClass('popup__video') ) {
+
+                    _videoPopup.find('iframe').remove()
+
+                }
 
             },
             _init = function(){
@@ -93,8 +93,11 @@
                 _btnShow.on( {
                     click: function(){
                         _show( $( this ).attr( 'data-popup' ) );
-                        if ( $( this ).hasClass( 'popup__open_top' ) ) {
-                            _wrap.addClass( 'popup__wrap_top' )
+
+                        if ( $( this ).hasClass('site__hero-play') ) {
+
+                            _addVideoFrame( $( this ).attr( 'data-video' ) )
+
                         }
                         return false;
                     }

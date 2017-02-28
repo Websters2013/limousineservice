@@ -40,6 +40,14 @@ var paths = {
                 'app/js/jquery.booking.js',
                 'app/js/jquery.google-autocomplite.js'
             ]
+        },
+        {
+            dist: 'single.min.js',
+            contains: [
+                'app/js/jquery.main.js',
+                'app/js/jquery.animation.js',
+                'app/js/jquery.single.js'
+            ]
         }
     ],
     vendorScripts: 'app/js/vendors/**/*.js',

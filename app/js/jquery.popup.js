@@ -94,7 +94,11 @@
                     click: function(){
                         _show( $( this ).attr( 'data-popup' ) );
 
+                        if ( $( this ).attr( 'data-popup') == 'video' ) {
 
+                            _addVideoFrame( $( this ).attr( 'data-video' ) )
+
+                        }
                         return false;
                     }
                 } );
@@ -122,11 +126,7 @@
 
                 console.log(className);
 
-                if ( className == 'video' ) {
 
-                    _addVideoFrame( $( this ).attr( 'data-video' ) )
-
-                }
 
                 _scrollConteiner.css( {
                     overflowY: 'hidden',

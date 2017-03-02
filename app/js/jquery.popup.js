@@ -94,11 +94,7 @@
                     click: function(){
                         _show( $( this ).attr( 'data-popup' ) );
 
-                        if ( $( this ).hasClass('site__hero-play') ) {
 
-                            _addVideoFrame( $( this ).attr( 'data-video' ) )
-
-                        }
                         return false;
                     }
                 } );
@@ -121,13 +117,24 @@
                 } );
             },
             _show = function( className ){
+
                 _setPopupContent( className );
+
+                console.log(className);
+
+                if ( className == 'video' ) {
+
+                    _addVideoFrame( $( this ).attr( 'data-video' ) )
+
+                }
 
                 _scrollConteiner.css( {
                     overflowY: 'hidden',
                     paddingRight: _getScrollWidth()
                 } );
+
                 _obj.addClass( 'popup_opened' );
+
                 _centerWrap();
 
             },

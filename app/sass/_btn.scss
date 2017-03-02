@@ -17,6 +17,11 @@
   &_2 {
     background: #28c776;
   }
+  &_4 {
+    border: 2px solid $main-blue-color;
+    background: $main-blue-color;
+    color: $main-white-color;
+  }
   &_book {
     padding: 0 39px 0 19px;
     font-size: 13px;
@@ -34,7 +39,7 @@
     }
     span {
       @include absoluteCenterY();
-      z-index: 4;
+      z-index: 3;
       right: 5px;
       display: inline-block;
       width: 23px;
@@ -66,7 +71,7 @@
       border-radius: 27px;
     }
     span {
-      z-index: 4;
+      z-index: 3;
       right: 8px;
       width: 27px;
       height: 27px;
@@ -105,6 +110,14 @@
       &:hover {
         background: #28c776;
         color: $main-white-color;
+      }
+    }
+    &_4 {
+      line-height: 41px;
+
+      &:hover {
+        background: $main-white-color;
+        color: $main-blue-color;
       }
     }
     &_book {

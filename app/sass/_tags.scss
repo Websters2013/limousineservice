@@ -1,0 +1,147 @@
+
+.tags {
+  position: relative;
+  margin-bottom: 10px;
+
+  &__item {
+    position: relative;
+    display: inline-block;
+    margin-right: 20px;
+    cursor: pointer;
+
+    &:hover {
+
+      .tags__item-tooltip {
+        opacity: 1;
+        visibility: visible;
+        -webkit-transform: translate(-50%, 0px) rotateX(0deg) scale(1);
+        transform: translate(-50%, 0px) rotateX(0deg) scale(1);
+      }
+    }
+  }
+  &__item-text {
+    vertical-align: middle;
+    color: #9698a1;
+    font-size: 14px;
+    @include  main-font2();
+  }
+  &__item-icon {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    top: -2px;
+
+    svg {
+      display: block;
+      width: 18px;
+
+      &.people {
+        width: 30px;
+        margin-left: -7px;
+      }
+      &.food {
+        width: 22px;
+      }
+      path {
+        fill: #9698a1;
+      }
+    }
+  }
+  &__item-tooltip {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    border: 1px solid $main-blue-color;
+    background: $main-white-color;
+    padding: 5px 16px;
+    margin-top: 21px;
+    border-radius: 24px;
+    font-size: 14px;
+    color: $main-blue-color;
+    white-space: nowrap;
+    @include main-font5();
+    -webkit-transform: translate(-50%, 15px) rotateX(-90deg) scale(.8);
+    transform: translate(-50%, 15px) rotateX(-90deg) scale(.8);
+    @include transition(all, $animation-time, 0);
+
+    &:before,
+    &:after {
+      @include absoluteCenterX();
+      width: 0;
+      height: 0;
+      border-style: solid;
+      content: '';
+    }
+    &:before {
+      top: -10px;
+      border-width: 0 9px 10px 9px;
+      border-color: transparent transparent $main-blue-color transparent;
+    }
+    &:after {
+      top: -8px;
+      border-width: 0 8px 8px 8px;
+      border-color: transparent transparent $main-white-color transparent;
+    }
+  }
+}
+
+@media (min-width: $tablet-portrait) {
+
+
+}
+@media (min-width: $tablet-landscape) {
+
+
+}
+@media (min-width: $desktop) {
+
+  .tags {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    top: 6px;
+
+    &.animation {
+
+      .tags__item {
+        -webkit-animation: fadeInLeft .5s forwards;
+        animation: fadeInLeft .5s forwards;
+
+        @for $i from 2 through 20 {
+
+          &:nth-child(#{$i}) {
+            animation-delay: .1s * $i;
+          }
+        }
+      }
+    }
+
+    &__item {
+      opacity: 0;
+      margin-right: 36.4px;
+    }
+    &__item-text {
+      font-size: 20px;
+    }
+    &__item-icon {
+      top: -2px;
+
+      svg {
+        width: 24px;
+
+        &.people {
+          width: 37px;
+          margin-left: -7px;
+        }
+        &.food {
+          width: 30px;
+        }
+      }
+    }
+    &__item-tooltip {
+      font-size: 14px;
+    }
+  }
+}

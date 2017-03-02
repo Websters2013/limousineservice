@@ -46,6 +46,7 @@ var paths = {
             contains: [
                 'app/js/jquery.main.js',
                 'app/js/jquery.animation.js',
+                'app/js/jquery.popup.js',
                 'app/js/jquery.single.js'
             ]
         }

@@ -1,0 +1,48 @@
+
+.reserve {
+  margin: -108px 0 0 0;
+  padding: 93px 15px 54px;
+  background: $main-blue-color;
+  text-align: center;
+
+  p,
+  .btn {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 19px 15px;
+  }
+  p {
+    font-size: 18px;
+    line-height: 24px;
+    color: $main-white-color;
+    @include main-font2();
+  }
+}
+
+@media (min-width: $tablet-portrait) {
+
+  .reserve {
+
+    .btn {
+      position: relative;
+      top: -3px;
+      left: 19px;
+    }
+  }
+}
+@media (min-width: $tablet-landscape) {
+
+
+}
+@media (min-width: $desktop) {
+
+  .reserve {
+    margin: -108px 0 0 0;
+    padding: 166px 15px 54px;
+
+    p {
+      font-size: 22px;
+      line-height: 24px;
+    }
+  }
+}

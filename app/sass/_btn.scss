@@ -58,6 +58,25 @@
       position: relative;
       z-index: 3;
     }
+    &_big {
+      padding: 0 46px 0 25px;
+      font-size: 15px;
+      line-height: 45px;
+
+      &:before {
+        right: 8px;
+        width: 27px;
+        height: 27px;
+        border-radius: 27px;
+      }
+      span {
+        z-index: 3;
+        right: 8px;
+        width: 27px;
+        height: 27px;
+        padding: 6px 0 0 0;
+      }
+    }
   }
   &_book-2 {
     padding: 0 46px 0 25px;
@@ -133,6 +152,12 @@
           right: 0;
         }
       }
+      &_big {
+        padding: 0 46px 0 25px;
+        font-size: 15px;
+        line-height: 45px;
+
+      }
     }
     &_book-2 {
       padding: 0 46px 0 25px;
@@ -152,5 +177,4 @@
       }
     }
   }
-
 }

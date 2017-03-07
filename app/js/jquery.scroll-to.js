@@ -12,16 +12,6 @@
 
     });
 
-    // $(document).ready(function(){
-    //     $('.navigation-controls__btn').click( function(){
-    //         var scroll_el = $(this).attr('href');
-    //         if ($(scroll_el).length != 0) {
-    //             $('html, body').animate({ scrollTop: $(scroll_el).offset().top }, 500);
-    //         }
-    //         return false;
-    //     });
-    // });
-
     var ScrollToElement = function ( obj ) {
 
         //private properties
@@ -55,17 +45,31 @@
                     }
                 });
                 _window.on({
-                    scroll: function () {
+                    scroll: function (  ) {
 
-                        _checkScroll();
+                        _checkScroll( _window.scrollTop() );
                     }
                 });
             },
-            _checkScroll = function () {
+            _checkScroll = function ( scroll ) {
 
-                var windowHeight = _window.height();
+                var windowHeight = _window.height(),
+                    stopPosition = $( '.reserve' ).offset().top - (windowHeight/2) - (_obj.innerHeight()/2) ;
 
-                if ( _window.scrollTop() >  windowHeight - 100 && _window.width() >= 768 ) {
+                if ( scroll >=  stopPosition) {
+
+                    _obj.css({
+                        'margin-top': -( scroll - stopPosition )
+                    });
+
+                } else {
+
+                    _obj.css({
+                        'margin-top': 0
+                    });
+                }
+
+                if ( _window.scrollTop() >  windowHeight - 100 && _window.width() >= 1200 ) {
 
                     _obj.addClass( 'fixed' )
 
@@ -82,7 +86,6 @@
                     if( _window.scrollTop() > ( topPos - windowHeight/2 ) ){
 
                         _btns.removeClass( 'active' );
-
                         _btns.eq( curItem.index() ).addClass( 'active' );
                         curItem.addClass( 'active' );
 

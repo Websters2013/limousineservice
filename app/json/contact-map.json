@@ -1,0 +1,50 @@
+{
+  "zoom": 11,
+  "places":[
+    {
+      "type": "railway",
+      "lat": "50.844942",
+      "lng": "4.338385",
+      "icon": "img/marker-icons/marker-icon_train.png",
+      "size": [ 36, 48 ]
+    },
+    {
+      "type": "airport",
+      "lat": "50.901650",
+      "lng": "4.487591",
+      "icon": "img/marker-icons/marker-icon_plain.png",
+      "size": [ 36, 48 ]
+    },
+    {
+      "type": "bls",
+      "lat": "50.864363",
+      "lng": "4.461750",
+      "icon": "img/marker-icons/marker-icon_bls.png",
+      "size": [ 43, 59 ]
+    },
+    {
+      "type": "bls",
+      "lat": "50.841434",
+      "lng": "4.404007",
+      "icon": "img/marker-icons/marker-icon_bls.png",
+      "size": [ 43, 59 ]
+    },
+    {
+      "type": "bls",
+      "lat": "50.891208",
+      "lng": " 4.664515",
+      "icon": "img/marker-icons/marker-icon_bls.png",
+      "size": [ 43, 59 ]
+    },
+    {
+      "type": "europe",
+      "lat": "50.838710",
+      "lng": "4.375526",
+      "icon": "img/marker-icons/marker-icon_europe.png",
+      "size": [ 43, 59 ]
+    }
+  ]
+}
+
+
+

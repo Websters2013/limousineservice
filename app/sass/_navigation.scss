@@ -6,14 +6,15 @@
     z-index: 10;
     top: 50%;
     right: 0;
-    background: #fff;
+    //background: #fff;
     padding: 10px 10px 0 10px;
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
 
     .navigation-controls__btn {
-      -webkit-transform: translateX(80px);
-      transform: translateX(80px);
+      display: block;
+      -webkit-transform: translateX(86px);
+      transform: translateX(86px);
       @include transition(transform, $animation-time, 0);
 
       &:hover,
@@ -24,14 +25,14 @@
     }
   }
   li {
-    margin-bottom: 21px;
+    margin-bottom: 18px;
   }
   &__btn {
     position: relative;
     display: inline-block;
     min-width: 82px;
     font-size: 12px;
-    line-height: 17px;
+    line-height: 22px;
     text-transform: uppercase;
     color: #2d3244;
     @include main-font2();
@@ -43,7 +44,7 @@
       position: absolute;
       width: 82px;
       left: 0;
-      bottom: -4px;
+      bottom: -2px;
       height: 2px;
       background: #2d3244;
       content: '';
@@ -119,7 +120,6 @@
 
   .navigation-controls {
     @include absoluteCenterY();
-    margin-top: -6px;
     right: 121px;
 
     li {
@@ -170,9 +170,9 @@
 
   .navigation-controls {
 
-    li {
+    .navigation-controls__btn {
 
-      &:hover .navigation-controls__btn {
+      &:hover {
         color: $main-blue-color;
 
         &:after {
@@ -180,6 +180,7 @@
         }
       }
     }
+
   }
   .navigation-down {
 

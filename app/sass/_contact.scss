@@ -1,0 +1,110 @@
+
+.contact {
+  position: relative;
+  background: #f7f8fa;
+
+  &:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100px;
+    width: 100%;
+    background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(255,255,255,1) 5%,rgba(255,255,255,0.88) 20%,rgba(255,255,255,0.74) 33%,rgba(255,255,255,0.19) 77%,rgba(255,255,255,0.06) 90%,rgba(255,255,255,0) 100%);
+    background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(255,255,255,1) 5%,rgba(255,255,255,0.88) 20%,rgba(255,255,255,0.74) 33%,rgba(255,255,255,0.19) 77%,rgba(255,255,255,0.06) 90%,rgba(255,255,255,0) 100%);
+    content: '';
+  }
+
+  &__map {
+    width: 100%;
+    padding-bottom: 80%;
+  }
+  &__info {
+    position: relative;
+    width: 100%;
+    max-width: 1212px;
+    margin: 0 auto;
+    background: #f7f8fa;
+    padding: 36px 15px;
+    text-align: center;
+
+    .btn_book_big {
+      border: none;
+      line-height: 45px;
+    }
+  }
+  &__info-title {
+    margin-bottom: 37px;
+    font-size: 24px;
+    line-height: 32px;
+    color: #2d3244;
+    @include main-font2();
+  }
+  &__info-contacts {
+    display: flex;
+    align-items: center;
+    flex-flow: column wrap;
+    padding: 53px 0 0;
+
+    a {
+      font-size: 16px;
+      line-height: 25px;
+      @include  main-font5();
+
+      &.mail {
+        color: $main-blue-color;
+        @include transition(color, $animation-time, 0);
+
+        &:hover {
+          color: #37353a;
+        }
+      }
+      &.phone {
+        color: #37353a;
+      }
+    }
+  }
+}
+
+@media (min-width: $tablet-portrait) {
+
+  .contact {
+
+    &__map {
+      padding-bottom: 50%;
+    }
+  }
+}
+
+@media (min-width: $tablet-landscape) {
+
+}
+
+@media (min-width: $desktop) {
+
+  .contact {
+
+    &:after {
+      height: 260px;
+    }
+
+    &__map {
+      padding-bottom: 38.9%;
+    }
+    &__info {
+      margin: -74px auto 0;
+      padding: 36px 15px 110px;
+    }
+    &__info-title {
+      margin-bottom: 37px;
+      font-size: 24px;
+      line-height: 48px;
+    }
+    &__info-contacts {
+
+      a {
+        font-size: 20px;
+        line-height: 30px;
+      }
+    }
+  }
+}

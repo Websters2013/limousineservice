@@ -4,7 +4,9 @@
 
   &__hero {
     position: relative;
-    padding: 35% 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
   }
   &__hero-wrap {
     position: relative;

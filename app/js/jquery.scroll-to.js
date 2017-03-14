@@ -7,7 +7,7 @@
         $.each( $( '.navigation-controls' ), function() {
 
             new ScrollToElement ( $( this ) );
-            console.log('ScrollToElement')
+
         } );
 
     });

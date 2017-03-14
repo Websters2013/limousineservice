@@ -1,5 +1,6 @@
 
 .navigation-controls {
+  display: none;
 
   &.fixed {
     position: fixed;
@@ -119,6 +120,7 @@
 @media (min-width: $tablet-portrait) {
 
   .navigation-controls {
+    display: inline-block;
     @include absoluteCenterY();
     right: 121px;
 

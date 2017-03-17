@@ -99,6 +99,26 @@
       color: $main-blue-color;
     }
   }
+
+  &_book-3 {
+    padding: 0 46px 0 25px;
+    font-size: 15px;
+    line-height: 45px;
+
+    &:before {
+      right: 8px;
+      width: 27px;
+      height: 27px;
+      border-radius: 27px;
+    }
+    span {
+      z-index: 0;
+      right: 8px;
+      width: 27px;
+      height: 27px;
+      padding: 6px 0 0 0;
+    }
+  }
 }
 
 @media (min-width: $tablet-portrait) {
@@ -176,6 +196,18 @@
           //border: 2px solid $main-white-color;
           background: $main-white-color;
           color: $main-blue-color;
+        }
+      }
+    }
+    &_book-3 {
+      padding: 0 46px 0 25px;
+      font-size: 15px;
+      line-height: 45px;
+
+      &:hover {
+
+        &:before {
+          background: $main-blue-color;
         }
       }
     }

@@ -30,7 +30,6 @@
     position: relative;
     @include blockCentered();
     padding-bottom: 59.278897%;
-    margin-bottom: -30px;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top center;
@@ -105,23 +104,6 @@
       }
     }
   }
-
-  &__transfer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 60px 15px 30px;
-    margin: 0 -15px;
-    background: #377ae6;
-
-    strong {
-      display: block;
-      margin: 0 0 10px;
-      font-size: 22px;
-      @include main-font2();
-    }
-  }
 }
 
 @media (min-width: $tablet-portrait) {
@@ -160,21 +142,10 @@
       }
     }
 
-    &__transfer {
-      flex-direction: row;
-      height: 256px;
-      padding: 85px calc(50% - 550px) 28px;
-
-      strong {
-        margin: 0 60px 0 0;
-      }
-    }
-
     &__player {
       width: 943px;
       height: 559px;
       padding-bottom: 0;
-      margin-bottom: -72px;
     }
   }
 }

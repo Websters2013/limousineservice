@@ -10,7 +10,7 @@
   }
   &__hero-wrap {
     position: relative;
-    max-width: 555px;
+    max-width: 565px;
     margin-bottom: 55px;
 
     > div {
@@ -21,9 +21,10 @@
     }
   }
   &__hero-title {
-    margin-bottom: 10px;
+    margin-bottom: 8px;
     font-size: 26px;
     line-height: 34px;
+    white-space: pre-line;
     @include main-font2();
   }
   &__hero-text {
@@ -35,15 +36,16 @@
   &__hero-pic {
     @include absoluteCenterY();
     display: block;
-    right: 60px;
-    width: 50%;
+    right: 14px;
+    width: 60.8%;
     height: auto;
   }
 
   &__item {
     white-space: nowrap;
     color: #2d3244;
-    min-height: 620px;
+    min-height: 635px;
+    padding-top: 165px;
     
     &:nth-child(2n) {
       background: #f2f3f7;
@@ -51,15 +53,16 @@
   }
   &__item-gallery {
     overflow: inherit !important;
+    left: 4px;
     display: inline-block;
     vertical-align: top;
-    width: 60%;
-    height: 306px;
+    width: 72%;
+    height: 342px;
     white-space: normal;
 
     &:before {
       position: absolute;
-      left: 0;
+      left: -99px;
       bottom: 0;
       content: '';
     }
@@ -127,10 +130,10 @@
     .swiper-pagination {
       display: inline-block;
       width: auto !important;
-      left: 0;
+      left: -17px !important;
       bottom: 0 !important;
-      -webkit-transform: rotate(-90deg) translateX(50%);
-      transform: rotate(-90deg) translateX(50%);
+      -webkit-transform: rotate(-90deg) translateX(53%);
+      transform: rotate(-90deg) translateX(53%);
       -webkit-transform-origin: left;
       transform-origin: left;
     }
@@ -141,6 +144,7 @@
       background: none;
       font-size: 16px;
       color: #adafb6;
+      margin: 0 11px !important;
       @include main-font2();
       @include transition(color, $animation-time, 0);
 
@@ -151,31 +155,60 @@
     }
   }
   &__item-info {
+    position: relative;
+    z-index: 10;
     display: inline-block;
     vertical-align: top;
-    width: 40%;
+    left: -153px;
+    width: 50%;
     white-space: normal;
   }
   &__item-title {
-    margin-bottom: 20px;
+    margin-bottom: 11px;
     font-size: 44px;
     line-height: 48px;
     @include main-font2();
 
     .tags {
+      top: 0;
 
+      .tags__item {
+        margin-right: 8px;
+      }
+      .tags__item-text {
+        font-size: 16px;
+      }
+      .tags__item-icon {
+        margin-left: -9px;
+      }
+      .tags__item-icon svg {
+        width: 18px;
+
+        &.people {
+          width: 30px;
+          margin-left: -7px;
+        }
+        &.food {
+          width: 24px;
+        }
+      }
     }
   }
   &__item-text {
+    margin-bottom: 37px;
+    padding: 0 40px 0 76px;
     font-size: 17px;
     line-height: 24px;
     @include main-font6()
   }
   &__item-btns {
+    padding-right: 50px;
+    text-align: right;
 
     a {
       position: relative;
       display: inline-block;
+      margin-left: 36px;
       padding-right: 40px;
       font-size: 14px;
       line-height: 22px;
@@ -232,7 +265,7 @@
       max-width: 50%;
 
       > div {
-        padding: 39px 15px 55px 0;
+        padding: 27px 15px 30px 0;
       }
     }
     &__hero-title {
@@ -259,7 +292,7 @@
     &__hero {
     }
     &__hero-wrap {
-      max-width: 555px;
+      max-width: 565px;
     }
     &__hero-title {
       font-size: 62px;

@@ -1,0 +1,153 @@
+.our-taxi {
+  position: relative;
+  background: #f2f3f7;
+  padding: 65px 0 80px;
+  color: #2d3244;
+  font-size: 17px;
+  line-height: 24px;
+  @include main-font6();
+
+  .site__centered {
+    max-width: 1180px;
+  }
+
+}
+.our-taxi__layout {
+  @include flexbox();
+  @include flex-direction(row);
+  @include flex-wrap(wrap);
+  @include justify-content();
+  @include align-items();
+
+  >div {
+    width: 100%;
+    margin: 0 0 38px;
+  }
+
+}
+.our-taxi__title {
+  margin: 0 0 17px;
+  color: #2d3244;
+  font-size: 44px;
+  line-height: 48px;
+  @include main-font2();
+}
+.our-taxi__discover {
+  position: relative;
+  display: inline-block;
+  padding-right: 40px;
+  font-size: 14px;
+  line-height: 22px;
+  text-transform: uppercase;
+  color: #377ae6;
+  @include main-font5();
+
+  i {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    display: inline-block;
+    width: 29px;
+    height: 29px;
+    border-radius: 50%;
+    border: 2px solid rgba(55,122,230,0.5);
+    -webkit-transition: border .3s linear 0s;
+    transition: border .3s linear 0s;
+
+    svg {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      width: 10px;
+
+      path {
+        fill: #377ae6;
+      }
+
+    }
+
+  }
+
+}
+.our-taxi__text {
+
+  p {
+    margin: 0 0 10px;
+  }
+
+}
+.our-taxi__links {
+  padding-top: 13px;
+  font-size: 16px;
+  @include main-font1();
+
+  li {
+
+    a {
+      color: rgba(45, 50, 68, 0.65);
+    }
+
+  }
+
+}
+.our-taxi__btns {
+  padding-top: 17px;
+
+  .btn {
+    margin: 0 30px 10px 0;
+  }
+
+}
+
+@media (min-width: $tablet-portrait) {
+
+
+
+}
+
+@media (min-width: $tablet-landscape) {
+
+  .our-taxi {
+    padding: 82px 0 106px;
+
+    &:after {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 44%;
+      height: 100%;
+      background: #ebecf0;
+      content: '';
+    }
+
+  }
+  .our-taxi__layout {
+    @include justify-content(space-between);
+
+    >div {
+      width: 30.7%;
+      margin: 0;
+      padding-top: 17px;
+
+      &:first-child  {
+        padding-top: 0;
+        width: 48%;
+      }
+
+    }
+
+  }
+  .our-taxi__text {
+    padding: 0 0 0 46px;
+  }
+
+}
+
+@media (min-width: $desktop) {
+
+
+
+}

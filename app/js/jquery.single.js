@@ -15,8 +15,8 @@
         //private properties
         var _self = this,
             _obj = obj,
-            _btnNext = _obj.find( '.site__centered .swiper-button-next' ),
-            _btnPrev = _obj.find( '.site__centered .swiper-button-prev' ),
+            _btnNext = _obj.find( '.swiper-button-next' ),
+            _btnPrev = _obj.find( '.swiper-button-prev' ),
             _window = $( window );
 
         //private methods

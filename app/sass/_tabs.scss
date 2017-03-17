@@ -1,0 +1,113 @@
+.tabs {
+
+}
+.tabs_animated1 {
+  transition: min-height 0.3s linear;
+}
+.tabs_animated2 {
+  transition: min-height 0.3s linear;
+}
+.tabs dl {
+  position: relative;
+}
+.tabs dt {
+  margin: 0 0 21px 0;
+  cursor: pointer;
+  font-size: 15px;
+  color: #2d3244;
+  text-transform: uppercase;
+  border-bottom: 2px solid transparent;
+  -webkit-transition: border 0.3s ease, color 0.3s ease;
+  transition: border 0.3s ease, color 0.3s ease;
+  @include main-font2();
+
+  &:hover,
+  &.active {
+    color: #5493f8;
+
+    +dd {
+
+      opacity: 1;
+      visibility: visible;
+
+    }
+
+  }
+  &.active {
+    border-color: #5493f8;
+  }
+
+}
+.tabs dd {
+  opacity: 0;
+  visibility: hidden;
+  height: 0;
+}
+
+.tabs_animated1 dd {
+  transition: opacity 0.3s ease, visibility 0.3s ease, height 0.3s ease;
+}
+.tabs__content {
+  padding-bottom: 20px;
+
+  p {
+    margin: 0 0 10px;
+  }
+
+}
+.tabs.tabs_animated1 .tabs__content {
+  transform-origin: 50% 0 0px;
+  transform: perspective(870px) rotateY(0deg) rotateX(-90deg);
+  transition: transform 0.3s ease;
+}
+.tabs.tabs_animated1 dt.active + dd .tabs__content {
+  transform: perspective(870px) rotateY(0deg) rotateX(0deg);
+}
+.tabs.tabs_animated2 .tabs__content {
+  opacity: 0;
+  transition: opacity 0.3s ease 0.1s;
+}
+.tabs.tabs_animated2 dt.active + dd .tabs__content {
+  opacity: 1;
+}
+
+@media (min-width: 1024px) {
+  .tabs dl {
+  }
+  .tabs__content {
+    padding-right: 20%;
+  }
+  .tabs dl dt {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 32px 21px 0;
+  }
+  .tabs dl dd {
+    position: absolute;
+    top: 35px;
+    left: 0;
+    width: 100%;
+  }
+  .tabs.tabs_animated1 .tabs__content {
+    transform: translateX(-120%);
+    transition: transform 0.3s ease 0.1s;
+  }
+  .tabs dt.active + dd .tabs__content {
+    transform: translateX(0);
+  }
+  .tabs.tabs_animated1 dt.active + dd .tabs__content {
+    transform: translateX(0);
+  }
+}
+@media (min-width: $desktop-wide) {
+
+  .tabs dl {
+    padding-right: 0;
+  }
+  .tabs dl dt {
+  }
+  .tabs__content {
+
+  }
+
+}

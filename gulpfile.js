@@ -74,6 +74,15 @@ var paths = {
                 'app/js/jquery.fleet.js',
                 'app/js/jquery.scroll-to.js'
             ]
+        },
+        {
+            dist: 'landing.min.js',
+            contains: [
+                'app/js/jquery.main.js',
+                'app/js/jquery.animation.js',
+                'app/js/jquery.scroll-to.js',
+                'app/js/jquery.tabs.js'
+            ]
         }
     ],
     vendorScripts: 'app/js/vendors/**/*.js',

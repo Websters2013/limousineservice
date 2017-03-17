@@ -1,4 +1,3 @@
-
 .single {
   padding-top: 100px;
 
@@ -143,6 +142,7 @@
       }
     }
   }
+
 }
 @media (min-width: $tablet-landscape) {
 
@@ -203,8 +203,8 @@
       .swiper-button-next {
         @include absoluteCenterY();
         display: inline-block;
-        width: auto;
-        height: auto;
+        width: 22%;
+        height: 100%;
         margin: 0;
         background: none;
         color: #616571;
@@ -215,14 +215,33 @@
         &:hover {
           color: $main-blue-color;
         }
+
+        >span {
+          position: absolute;
+          top: 50%;
+          right: 40px;
+          -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+        }
+
       }
       .swiper-button-prev {
-        -webkit-transform: translate(-100%, -50%);
-        transform: translate(-100%, -50%);
+        left: 0;
+        padding-left: 10px;
+        //-webkit-transform: translate(-100%, -50%);
+        //transform: translate(-100%, -50%);
       }
       .swiper-button-next {
-        -webkit-transform: translate(100%, -50%);
-        transform: translate(100%), -50%;
+        text-align: right;
+        right: 0;
+        padding-right: 10px;
+
+        >span {
+          right: auto;
+          left: 40px;
+        }
+        //-webkit-transform: translate(100%, -50%);
+        //transform: translate(100%), -50%;
       }
     }
     &__play {
@@ -280,4 +299,5 @@
       margin-bottom: 225px;
     }
   }
+
 }

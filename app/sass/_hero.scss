@@ -1,0 +1,59 @@
+.hero {
+  position: relative;
+  @include flexbox();
+  @include flex-direction(column);
+  @include justify-content(center);
+  @include align-items(center);
+  height: 500px;
+  padding: 100px 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  text-align: center;
+}
+.hero__layout {
+  position: relative;
+  max-width: 1000px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+.hero__title {
+  margin: 0 0 30px;
+  font-size: 32px;
+  line-height: 36px;
+  @include main-font3();
+  color: #ffffff;
+  letter-spacing: 1px;
+}
+
+@media (min-width: $tablet-portrait) {
+
+  .hero {
+    padding: 100px 0;
+  }
+  .hero__title {
+    font-size: 38px;
+    line-height: 40px;
+  }
+
+}
+
+@media (min-width: $tablet-landscape) {
+
+  .hero__title {
+    font-size: 42px;
+    line-height: 46px;
+  }
+
+}
+
+@media (min-width: $desktop) {
+
+  .hero {
+    min-height: 100vh;
+    max-height: 748px;
+    height: auto;
+    padding: 181px 0 200px;
+  }
+
+}

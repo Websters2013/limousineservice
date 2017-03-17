@@ -1,0 +1,178 @@
+.cars {
+  background: #f2f3f7;
+  padding: 50px 0;
+
+  .tags {
+    position: relative;
+    min-height: 50px;
+    margin-bottom: 17px;
+
+    .tags__item {
+      margin: 0 6px;
+      @include transition(all, $animation-time, .03);
+
+      .tags__item-icon {
+
+        svg {
+          width: 18px;
+
+          &.people {
+            width: 29px;
+          }
+          &.food {
+            width: 24px;
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+  .btn {
+    width: 230px;
+    padding: 0 5px;
+    margin: 20px 0;
+    box-shadow: 0 15px 20px -10px rgba(55, 122, 230, 0.4);
+  }
+
+}
+.cars__layout {
+  @include flexbox();
+  @include flex-direction(row);
+  @include flex-wrap(wrap);
+  @include justify-content();
+  @include align-items();
+
+  >div {
+    width: 100%;
+    margin: 0 0 38px;
+    text-align: center;
+  }
+
+}
+.cars__item {
+  display: inline-block;
+  vertical-align: top;
+  max-width: 284px;
+  height: 284px;
+  padding: 32px 15px 19px;
+  background: #fff;
+  text-align: center;
+}
+.cars__title {
+  margin: 0 0 0;
+  color: #2d3244;
+  font-size: 22px;
+  line-height: 25px;
+  @include main-font2();
+  @include transition(color, $animation-time, .03);
+}
+
+@media (min-width: $tablet-portrait) {
+
+  .cars {
+    padding: 0 0 50px;
+  }
+  .cars__layout {
+
+    >div {
+      width: 50%;
+    }
+
+  }
+
+}
+@media (min-width: $tablet-landscape) {
+
+  .cars {
+    padding: 0 0 80px;
+    margin-top: -123px;
+
+
+    .btn {
+      opacity: 0;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      margin: 0;
+      -webkit-transform: translateX(-50%) translateY(5px);
+      transform: translateX(-50%) translateY(5px);
+      @include transition(all, $animation-time, .03);
+    }
+
+  }
+  .cars__layout {
+
+    >div {
+      width: 33.333%;
+      text-align: center;
+
+      &:nth-child(3n+1) {
+        text-align: left;
+      }
+      &:nth-child(3n) {
+        text-align: right;
+      }
+    }
+
+  }
+  .cars__item {
+    width: 100%;
+    @include transition(all, $animation-time, .03);
+
+    &:hover {
+      -webkit-transform: scale(1.05);
+      transform: scale(1.05);
+
+      .cars__title {
+        color: #377ae6;
+      }
+      .btn {
+        opacity: 1;
+        -webkit-transform: translateX(-50%) translateY(0);
+        transform: translateX(-50%) translateY(0);
+      }
+      .tags {
+
+        .tags__item {
+          visibility: hidden;
+          -webkit-transform: translateY(10px);
+          transform: translateY(10px);
+        }
+
+      }
+
+    }
+
+  }
+}
+@media (min-width: $desktop) {
+
+  .cars {
+    padding: 0 0 174px;
+
+    .tags {
+
+      .tags__item-text {
+        font-size: 16px;
+      }
+
+    }
+
+  }
+
+}
+@media (max-width: $desktop) {
+
+  .cars__pic {
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+  }
+
+}

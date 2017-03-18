@@ -10,13 +10,13 @@
   }
   &__hero-wrap {
     position: relative;
-    max-width: 565px;
-    margin-bottom: 55px;
+    max-width: 470px;
+    margin: 55px 55px 55px 0;
 
     > div {
       position: relative;
       z-index: 2;
-      padding: 20px 15px 0 0;
+      padding: 20px 15px;
       background: $main-white-color;
     }
   }
@@ -36,9 +36,9 @@
   &__hero-pic {
     @include absoluteCenterY();
     display: block;
-    right: 14px;
-    width: 60.8%;
-    height: auto;
+    left: 35%;
+    width: auto;
+    height: 67%;
   }
 
   &__item {
@@ -154,6 +154,62 @@
       }
     }
   }
+
+  &__item-pic {
+    position: relative;
+    overflow: inherit !important;
+    left: 4px;
+    display: inline-block;
+    vertical-align: top;
+    width: 72%;
+    height: 342px;
+    z-index: 1;
+    white-space: normal;
+
+    &:before {
+      position: absolute;
+      left: -99px;
+      bottom: 0;
+      content: '';
+    }
+
+    &_ellips {
+
+      &:before {
+        width: 628px;
+        height: 110px;
+        background: url(../img/ellipse.png) no-repeat;
+        background-size: contain;
+      }
+    }
+    &_rectangle {
+
+      &:before {
+        width: 794px;
+        height: 124px;
+        background: url(../img/rectangle.png) no-repeat;
+        background-size: contain;
+      }
+    }
+
+    &_right {
+
+      img {
+        left: auto !important;
+        right: 0;
+      }
+    }
+
+    img {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      display: block;
+      max-width: 100%;
+      max-height: 100%;
+      height: auto;
+    }
+  }
   &__item-info {
     position: relative;
     z-index: 10;
@@ -263,6 +319,7 @@
     }
     &__hero-wrap {
       max-width: 50%;
+      margin: 0 0 55px 0;
 
       > div {
         padding: 27px 15px 30px 0;
@@ -297,6 +354,14 @@
     &__hero-title {
       font-size: 62px;
       line-height: 72px;
+    }
+    &__hero-pic {
+      @include absoluteCenterY();
+      display: block;
+      right: 14px;
+      left: auto;
+      width: 60.8%;
+      height: auto;
     }
   }
 

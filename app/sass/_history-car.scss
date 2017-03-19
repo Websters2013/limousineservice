@@ -1,0 +1,97 @@
+/*---------- history-car ----------*/
+.history-car {
+  position: relative;
+  padding: 65px 15px;
+  font-size: 17px;
+  line-height: 24px;
+  color: #9d9d9d;
+  background-color: #0d0d0d;
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: contain;
+  @include main-font6();
+
+  &:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: rgba(0,0,0,.6);
+    content: '';
+  }
+
+  &__title {
+    margin: 0 0 17px;
+    font-size: 38px;
+    line-height: 44px;
+    color: #ffffff;
+    @include main-font2();
+  }
+
+  &__wrap {
+    position: relative;
+    z-index: 2;
+
+    p {
+      margin: 0 0 10px;
+    }
+  }
+
+  &__images {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 20px 0 0;
+
+    img {
+      display: block;
+      width: 32.22222%;
+      height: auto;
+    }
+  }
+}
+
+@media (min-width: $tablet-portrait) {
+  .history-car {
+
+  }
+}
+
+@media (min-width: $tablet-landscape) {
+  .history-car {
+
+  }
+}
+
+@media (min-width: $desktop) {
+  .history-car {
+    padding: 0;
+    margin-bottom: 200px;
+
+    &__title {
+
+      span { display: block }
+    }
+
+    &__wrap {
+      padding: 253px 335px 278px 355px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      p {
+        padding-left: 80px;
+      }
+    }
+
+    &__images {
+      position: absolute;
+      left: 310px;
+      bottom: -77px;
+      width: 1080px;
+    }
+  }
+}
+/*---------- /history-car ---------*/

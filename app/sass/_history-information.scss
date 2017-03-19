@@ -1,6 +1,8 @@
 /*---------- history-information ----------*/
 .history-information {
-  padding: 65px 15px;
+  position: relative;
+  padding: 65px 15px 0;
+  z-index: 2;
   font-size: 17px;
   line-height: 24px;
   color: #2d3244;
@@ -22,11 +24,17 @@
   }
 
   &__pic {
+    margin-bottom: -50px;
+    text-align: right;
 
     img {
-      display: block;
-      width: 100%;
+      display: inline-block;
+      max-width: 100%;
     }
+  }
+
+  &__pic_type2 {
+    margin-bottom: 0;
   }
 }
 
@@ -62,8 +70,20 @@
     }
 
     &__pic {
+      position: absolute;
+      top: 213px;
+      left: 842px;
       width: 691px;
       height: 516px;
+      z-index: 2;
+    }
+
+    &__pic_type2 {
+      position: relative;
+      top: 0;
+      left: 0;
+      width: 1431px;
+      height: 420px;
     }
   }
 }

@@ -1,0 +1,70 @@
+/*---------- history-information ----------*/
+.history-information {
+  padding: 65px 15px;
+  font-size: 17px;
+  line-height: 24px;
+  color: #2d3244;
+  @include main-font6();
+
+  &__title {
+    margin: 0 0 17px;
+    font-size: 38px;
+    line-height: 44px;
+    color: #2d3244;
+    @include main-font2();
+  }
+
+  &__wrap {
+
+    p {
+      margin: 0 0 10px;
+    }
+  }
+
+  &__pic {
+
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+}
+
+@media (min-width: $tablet-portrait) {
+  .history-information {
+
+  }
+}
+
+@media (min-width: $tablet-landscape) {
+  .history-information {
+
+  }
+}
+
+@media (min-width: $desktop) {
+  .history-information {
+
+    &__title {
+
+      span { display: block }
+    }
+
+    &__wrap {
+      padding: 0 335px 156px 80px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      p {
+        width: 47%;
+      }
+    }
+
+    &__pic {
+      width: 691px;
+      height: 516px;
+    }
+  }
+}
+/*---------- /history-information ---------*/

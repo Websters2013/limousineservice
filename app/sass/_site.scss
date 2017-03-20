@@ -58,17 +58,18 @@
       display: block;
       position: relative;
       margin: 0 0 20px 0;
-      @include main-font6();
-      font-weight: 700;
+      @include main-font1();
       text-transform: uppercase;
 
       a {
-        font-size: 18px;
+        font-size: 16px;
         color: $header-menu-color;
+        transition: color .3s ease-in-out;
 
         &.active {
-          opacity: .6;
           cursor: default;
+          color: #377ae6 !important;
+          @include main-font2();
         }
       }
     }
@@ -395,7 +396,7 @@
 
         .language{
 
-          a{
+          a {
             color: $main-white-color;
           }
         }
@@ -407,7 +408,7 @@
 
               &.active,
               &:hover {
-                color: $main-white-color;
+                color: #377ae6 !important;
               }
             }
           }
@@ -429,7 +430,7 @@
         position: relative;
         top: 4px;
         display: inline-block;
-        margin-right: 32px;
+        margin-right: 45px;
         text-align: right;
       }
       &_dark {
@@ -444,7 +445,7 @@
       .site__menu-item {
         vertical-align: top;
         display: inline-block;
-        margin-right: 38px;
+        margin-right: 34.6px;
 
         &:last-child {
           margin-right: 0;
@@ -452,13 +453,16 @@
         a {
           vertical-align: top;
           display: inline-block;
-          font-size: 14px;
+          font-size: 12px;
           letter-spacing: 0.9px;
           @include transition(opacity, $animation-time, 0);
 
-          &:hover,
-          &.active {
+          &:hover {
             opacity: .6;
+            border-bottom: none;
+          }
+          &.active {
+            opacity: 1;
             border-bottom: none;
           }
         }

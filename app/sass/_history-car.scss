@@ -70,6 +70,8 @@
     padding: 0;
     margin-bottom: 263px;
 
+    &:before { display: none }
+
     &__title {
 
       span { display: block }

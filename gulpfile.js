@@ -31,6 +31,7 @@ var paths = {
                 'app/js/jquery.main.js',
                 'app/js/jquery.animation.js',
                 'app/js/jquery.fleet.js',
+                'app/js/jquery.popup.js',
                 'app/js/jquery.scroll-to.js'
             ]
         },
@@ -40,6 +41,7 @@ var paths = {
                 'app/js/jquery.main.js',
                 'app/js/jquery.animation.js',
                 'app/js/jquery.booking.js',
+                'app/js/jquery.popup.js',
                 'app/js/jquery.google-autocomplite.js'
             ]
         },
@@ -57,6 +59,7 @@ var paths = {
             contains: [
                 'app/js/jquery.main.js',
                 'app/js/jquery.animation.js',
+                'app/js/jquery.popup.js',
                 'app/js/jquery.scroll-to.js'
             ]
         },
@@ -64,6 +67,7 @@ var paths = {
             dist: 'contact.min.js',
             contains: [
                 'app/js/jquery.main.js',
+                'app/js/jquery.popup.js',
                 'app/js/jquery.animation.js',
                 'app/js/jquery.contact.js'
             ]
@@ -72,6 +76,7 @@ var paths = {
             dist: 'fleet.min.js',
             contains: [
                 'app/js/jquery.main.js',
+                'app/js/jquery.popup.js',
                 'app/js/jquery.animation.js',
                 'app/js/jquery.fleet.js',
                 'app/js/jquery.scroll-to.js'

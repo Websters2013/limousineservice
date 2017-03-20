@@ -29,9 +29,6 @@
   &__wrap {
     position: relative;
     z-index: 2;
-    max-width: 1450px;
-    margin: 0 auto;
-    box-shadow: 0 15px 40px 0 rgba(0, 0, 0, 0.1);
   }
 
   &__content {
@@ -39,6 +36,9 @@
     text-align: left;
     padding: 40px 0 0;
     background: #fff;
+    max-width: 1450px;
+    margin: 0 auto;
+    box-shadow: 0 15px 40px 0 rgba(0, 0, 0, 0.1);
   }
 
   &__close {

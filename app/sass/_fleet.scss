@@ -134,9 +134,10 @@
     }
   }
   &__item-info {
+    display: block;
     position: relative;
     z-index: 10;
-    display: block;
+    margin-bottom: 30px;
   }
   &__item-title {
     margin-bottom: 11px;
@@ -414,7 +415,23 @@
       padding-top: 165px;
 
       &:nth-child(2n) {
-        background: #f2f3f7;
+
+        .fleet__item-btns {
+          padding-left: 76px;
+          text-align: left;
+
+          a {
+            margin: 0 36px 0 0;
+          }
+        }
+
+        .fleet__item-info {
+          left: -75px;
+        }
+
+        .fleet__item-gallery {
+          left: -200px;
+        }
       }
     }
 
@@ -445,7 +462,8 @@
       width: auto !important;
       height: 0;
       transform: rotate(-90deg) translateX(-50%);
-      left: -200px !important;
+      top: 90px;
+      left: -100px !important;
     }
 
     .swiper-pagination-bullet {
@@ -503,7 +521,7 @@
       &_right {
 
         .swiper-pagination {
-          right: -70px !important;
+          right: -30px !important;
           left: auto !important;
         }
         .swiper-slide {
@@ -525,19 +543,25 @@
       z-index: 10;
       display: inline-block;
       vertical-align: top;
-      left: -153px;
+      left: -193px;
       width: 50%;
+      margin-bottom: 0;
       white-space: normal;
     }
     &__item-title {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: flex-end;
       margin-bottom: 11px;
-      padding-left: 151px;
+      padding-right: 40px;
       font-size: 44px;
       line-height: 48px;
       @include main-font2();
 
       .tags {
         top: 0;
+        margin: 0 0 0 30px;
 
         .tags__item {
           margin-right: 8px;
@@ -702,7 +726,7 @@
       .fleet__car-pic {
         position: absolute;
         top: -133px;
-        right: 46%;
+        right: 48%;
         width: 1011px;
       }
     }

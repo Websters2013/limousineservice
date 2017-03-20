@@ -549,12 +549,12 @@
     }
 
     &__car_van {
-      padding-top: 191px;
+      padding-top: 191px !important;
 
       .fleet__car-pic {
         position: absolute;
         top: 69px;
-        left: 27px;
+        right: 43.3%;
       }
     }
 
@@ -565,7 +565,8 @@
       .fleet__car-pic {
         position: absolute;
         top: 150px;
-        right: -148px;
+        left: 41.7%;
+        width: 1146px;
       }
     }
 
@@ -576,7 +577,8 @@
       .fleet__car-pic {
         position: absolute;
         top: -133px;
-        left: -96px;
+        right: 46%;
+        width: 1011px;
       }
     }
   }

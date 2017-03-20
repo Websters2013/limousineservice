@@ -9,7 +9,7 @@
   @include main-font6();
 
   &__title {
-    margin: 0 0 17px;
+    margin: 0 0 24px;
     font-size: 38px;
     line-height: 44px;
     color: #2d3244;
@@ -33,8 +33,9 @@
     }
   }
 
-  &__pic_type2 {
-    margin-bottom: 0;
+  &.history-information_type2 {
+
+    .history-information__pic { margin-bottom: 0 }
   }
 }
 
@@ -59,7 +60,7 @@
     }
 
     &__wrap {
-      padding: 0 335px 156px 80px;
+      padding: 0 314px 272px 80px;
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
@@ -71,19 +72,28 @@
 
     &__pic {
       position: absolute;
-      top: 213px;
-      left: 842px;
+      top: 219px;
+      left: 834px;
       width: 691px;
       height: 516px;
       z-index: 2;
+
+      img {
+        height: 100%;
+      }
     }
 
-    &__pic_type2 {
-      position: relative;
-      top: 0;
-      left: 0;
-      width: 1431px;
-      height: 420px;
+
+    &.history-information_type2 {
+      padding-bottom: 263px;
+
+      .history-information__pic {
+        top: auto;
+        bottom: -110px;
+        left: 102px;
+        width: 1431px;
+        height: 420px;
+      }
     }
   }
 }

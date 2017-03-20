@@ -10,6 +10,19 @@
 
         } );
 
+        $( '.navigation-down' ).on({
+            click: function () {
+                var elem = $(this),
+                    scrollElem = elem.attr( 'href' );
+
+                if ( scrollElem.length !== 0 ) {
+
+                    $('html, body').animate( {scrollTop: $( scrollElem ).offset().top - 15 }, 500 );
+                }
+                return false;
+            }
+        });
+
     });
 
     var ScrollToElement = function ( obj ) {
@@ -37,13 +50,13 @@
                         return false;
                     }
                 });
-                _btnDown.on({
-                    click: function () {
-
-                        _scrollTo( $( this ) );
-                        return false;
-                    }
-                });
+                // _btnDown.on({
+                //     click: function () {
+                //
+                //         _scrollTo( $( this ) );
+                //         return false;
+                //     }
+                // });
                 _window.on({
                     scroll: function (  ) {
 

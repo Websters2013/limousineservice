@@ -23,7 +23,7 @@
   }
 
   &__title {
-    margin: 0 0 17px;
+    margin: 0 0 19px;
     font-size: 38px;
     line-height: 44px;
     color: #ffffff;
@@ -68,7 +68,7 @@
 @media (min-width: $desktop) {
   .history-car {
     padding: 0;
-    margin-bottom: 200px;
+    margin-bottom: 263px;
 
     &__title {
 
@@ -76,7 +76,7 @@
     }
 
     &__wrap {
-      padding: 253px 335px 278px 355px;
+      padding: 260px 335px 264px 326px;
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
@@ -88,8 +88,8 @@
 
     &__images {
       position: absolute;
-      left: 310px;
-      bottom: -77px;
+      left: 286px;
+      bottom: -82px;
       width: 1080px;
     }
   }

@@ -23,10 +23,10 @@ $json_data = '
                     <!--/booking__message-title-->
 
                     <!--booking__message-text-->
-                    <p class="booking__message-text">
-                        Your limousine has been booked. If you have any question regarding
-                        your booking, just call us: <a href="tel:023181463">02 318 14 63</a>.
-                    </p>
+                    <div class="booking__message-text">
+                        <p>Your request has been successfully sent and is in process for a quote!</p>
+                        <p>If you have any question regarding your booking, just call us: <a href="tel:023181463">02 318 14 63</a>.</p>
+                    </div>
                     <!--/booking__message-text-->
 
                     <!--booking__message-card-->
@@ -71,8 +71,14 @@ $json_data = '
                     </div>
                     <!--/booking__message-card-->
 
-                    <!--booking__message-return-->
-                    <a class="booking__message-return" href="#">Return to our services
+                </div>
+                <!--/booking__message-wrap-->
+
+                    <!-- booking__message-controls -->
+                    <div class="booking__message-controls">
+                    
+                        <!--booking__message-return-->
+                    <a class="booking__message-return" href="#">Continue browsing
                         <i>
                             <svg x="0px" y="0px" viewBox="0 0 284.935 284.936" style="enable-background:new 0 0 284.935 284.936;"
                      xml:space="preserve">
@@ -87,9 +93,9 @@ $json_data = '
                         </i>
                     </a>
                     <!--/booking__message-return-->
-
-                </div>
-                <!--/booking__message-wrap-->
+                    
+                    </div>
+                    <!-- /booking__message-controls -->
 
             </div>
             <!--/booking__message-->

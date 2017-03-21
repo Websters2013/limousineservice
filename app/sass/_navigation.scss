@@ -22,6 +22,23 @@
       &.active {
         -webkit-transform: translateX(0);
         transform: translateX(0);
+        width: 200%;
+      }
+
+
+      &:before,
+      &:after {
+        width: 200%;
+      }
+      &:after {
+        width: 0;
+      }
+
+      &.active{
+
+        &:after {
+          width: 200%;
+        }
       }
     }
   }
@@ -171,6 +188,19 @@
 @media (min-width: $desktop) {
 
   .navigation-controls {
+
+    &.fixed {
+
+      .navigation-controls__btn {
+
+        &:hover {
+
+          &:after {
+            width: 200%;
+          }
+        }
+      }
+    }
 
     .navigation-controls__btn {
 

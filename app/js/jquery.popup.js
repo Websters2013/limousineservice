@@ -99,6 +99,10 @@
                             _addVideoFrame( $( this ).attr( 'data-video' ) )
 
                         }
+                        if ( $( this ).attr( 'data-popup') == 'book' ) {
+                            $( '.popup__book .booking' )[0].list.initSwiper();
+                        }
+
                         return false;
                     }
                 } );

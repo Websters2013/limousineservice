@@ -65,6 +65,64 @@
     }
   }
 }
+.nice-radio-circle {
+  display: inline-block;
+  vertical-align: top;
+  user-select: none;
+  @include main-font1();
+
+  input[ type = radio ] {
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
+
+    &:checked + label {
+
+      &:before {
+        border: 5px solid $main-blue-color;
+      }
+
+    }
+
+    &:disabled + label {
+      cursor: default;
+      opacity: .5;
+    }
+
+  }
+  label {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    transform: none;
+    padding-left: 27px;
+    letter-spacing: 0.5px;
+    font-size: 16px;
+    color: #2d3244;
+    cursor: pointer !important;
+    pointer-events: auto !important;
+    @include transition(color, .3, 0);
+
+    &:before {
+      position: relative;
+      content: '';
+      top: -2px;
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 5px;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      box-sizing: border-box;
+      background: #fff;
+      border: 1px solid #c3c3c3;
+      transform: border .3s ease-in-out;
+    }
+
+    &:hover {
+      color: $main-blue-color;
+    }
+  }
+}
 .nice-radio-tile {
   position: relative;
   display: inline-block;

@@ -21,6 +21,7 @@ var paths = {
             dist: 'index.min.js',
             contains: [
                 'app/js/jquery.main.js',
+                'app/js/jquery.booking.js',
                 'app/js/jquery.popup.js',
                 'app/js/jquery.animation.js'
             ]

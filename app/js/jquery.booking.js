@@ -41,16 +41,35 @@
             _statusItem = _statusWrap.find( '.booking__status-item' ),
             _preloader = $( '.preloader' ),
             _request,
-            _scroller = $( 'html,body' ),
-            _window = $( window );
+            _scroller = $( 'html, body' ),
+            _window = $( window ),
+            _roadTripBtn = _obj.find( '.type-mission input' ),
+            _roadTrip = _obj.find( '.booking__form-road-trip' ),
+            stepsCount = _obj.find( '.booking__status-item' ).length;
 
         //private methods
         var _constructor = function () {
             _obj[0].list = _self;
             _onEvents();
-            _addSwiper();
+
+            if ( !_obj.parents( '.popup__book' ).length ) {
+                _addSwiper();
+            }
+
         },
             _onEvents = function () {
+
+                _roadTripBtn.on( {
+                    click: function () {
+                        var elem = $( this );
+
+                        if ( elem.attr( 'id' ) == 'type-mission2' ) {
+                            _roadTrip.addClass( 'active' )
+                        } else {
+                            _roadTrip.removeClass( 'active' )
+                        }
+                    }
+                } );
 
                 _form.on( {
                     change: function() {
@@ -232,24 +251,38 @@
                 _statusItem.removeClass( 'active' );
                 curItem.addClass( 'active' );
 
-                if ( index == 0 ) {
+                // if ( index == 0 ) {
+                //
+                //     _statusLine.css({
+                //         width: 0
+                //     })
+                //
+                // } else if( index == 1 ) {
+                //
+                //     _statusLine.css({
+                //         width: 50 + '%'
+                //     })
+                //
+                // } else if ( index == 2 ) {
+                //
+                //     _statusLine.css({
+                //         width: 100 + '%'
+                //     })
+                //
+                // }
 
+                if ( index == 0 ) {
                     _statusLine.css({
                         width: 0
                     })
-
-                } else if( index == 1 ) {
-
-                    _statusLine.css({
-                        width: 50 + '%'
-                    })
-
-                } else if ( index == 2 ) {
-
+                } else if ( index == stepsCount ) {
                     _statusLine.css({
                         width: 100 + '%'
                     })
-
+                } else {
+                    _statusLine.css({
+                        width: index/(stepsCount - 1)*100 + '%'
+                    })
                 }
 
             },
@@ -364,6 +397,10 @@
             },{
                 duration: 500
             });
+        };
+
+        _self.initSwiper = function () {
+            _addSwiper();
         };
 
         _constructor();

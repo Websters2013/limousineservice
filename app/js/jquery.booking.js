@@ -45,18 +45,17 @@
             _window = $( window ),
             _roadTripBtn = _obj.find( '.type-mission input' ),
             _roadTrip = _obj.find( '.booking__form-road-trip' ),
-            stepsCount = _obj.find( '.booking__status-item' ).length;
+            _stepsCount = _obj.find( '.booking__status-item' ).length;
 
         //private methods
         var _constructor = function () {
-            _obj[0].list = _self;
-            _onEvents();
+                _obj[0].list = _self;
+                _onEvents();
 
-            if ( !_obj.parents( '.popup__book' ).length ) {
-                _addSwiper();
-            }
-
-        },
+                if ( !_obj.parents( '.popup__book' ).length ) {
+                    _addSwiper();
+                }
+            },
             _onEvents = function () {
 
                 _roadTripBtn.on( {
@@ -88,7 +87,7 @@
                     },
                     submit: function() {
 
-                        if ( _steps.eq( 2 ).hasClass( 'required' ) ) {
+                        if ( _steps.eq( _stepsCount - 1 ).hasClass( 'required' ) ) {
                             _preloader.addClass( 'loading' );
                             _sendForm();
                             return false
@@ -98,7 +97,6 @@
                             return false
 
                         }
-
                     }
                 } );
 
@@ -110,7 +108,6 @@
                             _copyDepartureValues();
 
                         }
-
                     }
                 } );
             },
@@ -124,6 +121,8 @@
                     simulateTouch: false,
                     onSlideChangeEnd: function( swiper) {
 
+                        console.log( 'onSlideChangeEnd', _stepsCount);
+
                         var activeSlide = $('.swiper-slide-active'),
                             activeIndex = activeSlide.index();
 
@@ -131,7 +130,7 @@
 
                         _setStatus( activeIndex );
 
-                        if ( activeIndex == 2 &&  activeSlide.hasClass( 'required' )) {
+                        if ( activeIndex == _stepsCount - 1 &&  activeSlide.hasClass( 'required' )) {
 
                             _submitBtn.addClass( 'active' )
 
@@ -195,9 +194,7 @@
                         if ( curInput.val() !== '' ) {
 
                             requaredLength ++;
-
                         }
-
                     } );
 
                     console.log('requaredInputs',requaredInputs.length, 'requaredLength', requaredLength);
@@ -207,14 +204,12 @@
                         curStep.addClass( 'required' );
                         _controlPanel.addClass( 'required' );
                         _window.scrollToTop( scrollPosition );
-
                     }
                 }
 
-                if ( index == 2 && curStep.hasClass( 'required' ) ) {
+                if ( index == 3 && curStep.hasClass( 'required' ) ) {
 
                     _submitBtn.addClass( 'active' )
-
                 }
             },
             _copyDepartureValues = function () {
@@ -237,9 +232,7 @@
                         _checkStep( arrivalDistrict.parents( '.booking__form-item' ).index() );
 
                     }, 200);
-
                 }
-
             },
             _setStatus = function ( index ) {
 
@@ -275,13 +268,13 @@
                     _statusLine.css({
                         width: 0
                     })
-                } else if ( index == stepsCount ) {
+                } else if ( index == _stepsCount ) {
                     _statusLine.css({
                         width: 100 + '%'
                     })
                 } else {
                     _statusLine.css({
-                        width: index/(stepsCount - 1)*100 + '%'
+                        width: index/(_stepsCount - 1)*100 + '%'
                     })
                 }
 
@@ -323,7 +316,6 @@
                         service = $(this).val();
                         return false
                     }
-
                 });
 
                 numberPassengersInputs.each( function () {
@@ -374,8 +366,6 @@
                             $( '.booking__message' ).addClass( 'show' )
 
                         }, 200);
-
-
                     },
                     error: function( XMLHttpRequest ){
                         if( XMLHttpRequest.statusText != "abort" ){

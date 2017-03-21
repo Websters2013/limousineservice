@@ -1,16 +1,12 @@
 "use strict";
 ( function() {
 
-
-
     $( function() {
 
         $.each( $( '.autocomplete' ), function(){
 
-            new GoogleAutocomplete ( $(this) )
-
+            new GoogleAutocomplete ( $(this) );
         } );
-
     });
 
     var GoogleAutocomplete = function ( obj ) {
@@ -26,11 +22,7 @@
 
         //private methods
         var _constructor = function () {
-
-                _obj[0].autocomplite = _self;
-                _initAutocomplete();
-                _onEvents();
-
+                _obj[0].obj = _self;
             },
             _initAutocomplete = function () {
 
@@ -96,7 +88,6 @@
                     focus: function() {
 
                         _geoLocation()
-
                     }
                 } );
 
@@ -105,6 +96,10 @@
         //public properties
 
         //public methods
+        _self.initAutocomplite = function () {
+            _initAutocomplete();
+            _onEvents();
+        };
 
         _constructor();
     };

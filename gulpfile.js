@@ -21,6 +21,7 @@ var paths = {
             dist: 'index.min.js',
             contains: [
                 'app/js/jquery.main.js',
+                'app/js/jquery.google-autocomplite.js',
                 'app/js/jquery.booking.js',
                 'app/js/jquery.popup.js',
                 'app/js/jquery.animation.js'
@@ -41,9 +42,9 @@ var paths = {
             contains: [
                 'app/js/jquery.main.js',
                 'app/js/jquery.animation.js',
+                'app/js/jquery.google-autocomplite.js',
                 'app/js/jquery.booking.js',
-                'app/js/jquery.popup.js',
-                'app/js/jquery.google-autocomplite.js'
+                'app/js/jquery.popup.js'
             ]
         },
         {

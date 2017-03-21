@@ -121,8 +121,6 @@
                     simulateTouch: false,
                     onSlideChangeEnd: function( swiper) {
 
-                        console.log( 'onSlideChangeEnd', _stepsCount);
-
                         var activeSlide = $('.swiper-slide-active'),
                             activeIndex = activeSlide.index();
 
@@ -196,8 +194,6 @@
                             requaredLength ++;
                         }
                     } );
-
-                    console.log('requaredInputs',requaredInputs.length, 'requaredLength', requaredLength);
 
                     if ( requaredLength >= requaredInputs.length) {
 

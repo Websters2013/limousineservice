@@ -101,7 +101,6 @@
                         }
                         if ( $( this ).attr( 'data-popup') == 'book' ) {
                             $( '.popup__book .booking' )[0].list.initSwiper();
-                            $( '.autocomplete' )[0].obj.initAutocomplite();
                         }
 
                         return false;

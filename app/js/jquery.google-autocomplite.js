@@ -23,6 +23,9 @@
         //private methods
         var _constructor = function () {
                 _obj[0].obj = _self;
+
+                _initAutocomplete();
+                _onEvents();
             },
             _initAutocomplete = function () {
 

@@ -68,7 +68,6 @@
 
         &.active {
           cursor: default;
-          color: #377ae6 !important;
           @include main-font2();
         }
       }
@@ -176,6 +175,7 @@
     background-size: cover;
     background-position: center;
     text-align: center;
+    background-color: #0b1930;
   }
   &__hero-video {
     position: absolute;
@@ -185,6 +185,7 @@
     top: 50%;
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
+    opacity: .7;
   }
   &__hero-title {
     position: relative;
@@ -464,6 +465,7 @@
           &.active {
             opacity: 1;
             border-bottom: none;
+            color: #377ae6 !important;
           }
         }
       }

@@ -76,13 +76,15 @@
                         var activeSlide = $('.swiper-slide-active'),
                             activeIndex = activeSlide.index();
 
-                        _checkStep( activeIndex );
+                        setTimeout( function () {
+                            _checkStep( activeIndex );
 
-                        if ( activeSlide.hasClass( 'required' ) ) {
+                            if ( activeSlide.hasClass( 'required' ) ) {
 
-                            _nextBtn.removeClass( 'disabled' )
+                                _nextBtn.removeClass( 'disabled' )
 
-                        }
+                            }
+                        }, 500 )
 
                     },
                     submit: function() {
@@ -239,26 +241,6 @@
                 curItem.removeClass( 'last' );
                 _statusItem.removeClass( 'active' );
                 curItem.addClass( 'active' );
-
-                // if ( index == 0 ) {
-                //
-                //     _statusLine.css({
-                //         width: 0
-                //     })
-                //
-                // } else if( index == 1 ) {
-                //
-                //     _statusLine.css({
-                //         width: 50 + '%'
-                //     })
-                //
-                // } else if ( index == 2 ) {
-                //
-                //     _statusLine.css({
-                //         width: 100 + '%'
-                //     })
-                //
-                // }
 
                 if ( index == 0 ) {
                     _statusLine.css({

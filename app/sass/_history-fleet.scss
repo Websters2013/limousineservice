@@ -46,8 +46,10 @@
   .history-fleet {
 
     &__hero {
-      align-items: flex-end;
-      padding-bottom: 93px;
+      //align-items: flex-end;
+      //padding-bottom: 93px;
+      min-height: 600px;
+      padding-top: 160px;
     }
     &__hero-wrap {
       max-width: 50%;

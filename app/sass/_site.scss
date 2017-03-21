@@ -172,10 +172,8 @@
   &__hero {
     position: relative;
     padding: 28.85% 15px 27.1%;
-    background-size: cover;
-    background-position: center;
-    text-align: center;
     background-color: #0b1930;
+    text-align: center;
   }
   &__hero-video {
     position: absolute;
@@ -186,6 +184,9 @@
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     opacity: .7;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
   }
   &__hero-title {
     position: relative;

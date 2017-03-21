@@ -139,18 +139,6 @@
         padding: 0 10px;
       }
 
-      &__form-controls {
-        padding: 26px 73px;
-
-        > div {
-          justify-content: flex-end;
-        }
-
-        .btn {
-          margin-left: 30px;
-        }
-      }
-
       &__form-label {
         margin-bottom: 0;
         color: #2d3244;
@@ -239,6 +227,18 @@
           margin-bottom: 41px;
         }
 
+        &__form-controls {
+          padding: 26px 73px;
+
+          > div {
+            justify-content: flex-end;
+          }
+
+          .btn {
+            margin-left: 30px;
+          }
+        }
+
         &__title {
           width: 210px;
         }
@@ -255,6 +255,32 @@
 
           &-item {
             transform: none !important;
+          }
+        }
+
+        &__form-info_centered {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          align-items: flex-start;
+          width: 796px;
+          max-width: none;
+          padding: 0;
+
+          fieldset {
+            width: 443px;
+
+            textarea { height: 192px }
+          }
+
+          .booking__form-label_lowercase {
+            width: 100%;
+
+            &:before { display: none }
+          }
+
+          .booking__form-label_lowercase + fieldset {
+            width: 325px;
           }
         }
 

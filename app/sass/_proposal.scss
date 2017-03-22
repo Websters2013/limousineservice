@@ -149,6 +149,7 @@
           flex-flow: column wrap;
           height: 100%;
           width: 45%;
+          min-width: 0;
           background: $main-white-color;
           padding: 2px 0 0 35px;
           font-size: 38px;
@@ -190,7 +191,7 @@
           left: 0;
           width: 100%;
           max-width: 598px;
-          min-width: 550px;
+          min-width: 500px;
           height: 100%;
           z-index: 1;
           background: url("../img/wave.png") no-repeat bottom left;
@@ -205,7 +206,7 @@
           left: 0;
           width: 100%;
           max-width: 598px;
-          min-width: 550px;
+          min-width: 500px;
           height: 100%;
           z-index: 1;
           background: url("../img/wave-hover.png") no-repeat bottom left;
@@ -227,10 +228,11 @@
 
 
           .proposal__item-title {
-            padding-bottom: 95px;
+            padding-bottom: 88px;
 
             &:after {
-              right: 119px;
+              //right: 119px;
+              right: 19%;
             }
           }
         }
@@ -238,9 +240,10 @@
         .proposal__item-title {
 
           &:after {
-            right: 150px;
+            //right: 150px;
+            right: 23%;
             top: auto;
-            bottom: 60px;
+            bottom: 58px;
             border-width: 25px;
             transform: none;
           }
@@ -339,11 +342,11 @@
       &_small {
 
         .proposal__item-title {
-          padding: 2px 0 0 54px;
+          padding: 4px 0 0 54px;
           font-size: 48px;
 
           b {
-            margin-bottom: 1px;
+            padding: 5px 0;
             font-size: 25px;
           }
         }
@@ -351,10 +354,11 @@
 
     }
     &__item-title {
-      padding: 55px 0 55px 54px;
+      padding: 47px 0 47px 54px;
       font-size: 48px;
 
       b {
+        margin-bottom: 8px;
         font-size: 36px;
       }
     }

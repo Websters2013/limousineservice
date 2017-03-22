@@ -49,6 +49,11 @@
       background-color: #fff;
       background-position: center;
       background-size: cover;
+      -webkit-transform: translatez(0);
+      -moz-transform: translatez(0);
+      -ms-transform: translatez(0);
+      -o-transform: translatez(0);
+      transform: translatez(0);
     }
   }
   &__item-title {

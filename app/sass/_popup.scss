@@ -133,6 +133,7 @@
 
       .swiper-container {
         padding: 0 10px;
+        margin: 0;
       }
 
       &__head {
@@ -140,7 +141,7 @@
       }
 
       &__form-label {
-        margin-bottom: 0;
+        margin-bottom: 2px;
         color: #2d3244;
         text-transform: none;
         @include main-font2();
@@ -241,6 +242,7 @@
 
         &__title {
           width: 210px;
+          margin: -4px 0 0;
         }
 
         &__status {
@@ -295,6 +297,10 @@
           padding: 0;
         }
 
+        .swiper-slide {
+          padding-bottom: 6px;
+        }
+
         &__form-label {
           width: auto;
           top: 0;
@@ -304,7 +310,8 @@
         &__form-wrap {
           display: block;
           width: 796px;
-          margin: 0 auto 43px;
+          margin: 0 auto 34px;
+          padding: 2px 0 0;
 
           .nice-radio-tile label {
             font-size: 14px;

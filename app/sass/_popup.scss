@@ -317,11 +317,26 @@
           .nice-radio-tile_middle {
             width: 192px;
             height: 87px;
+
+            span { display: block }
           }
 
           .nice-radio-tile_big {
             width: 152px;
             height: 109px;
+          }
+
+          .nice-radio-tile input[type=radio]:checked+label {
+            @include main-font2();
+
+            span {
+              @include main-font1();
+            }
+          }
+
+          .booking__form-label {
+            top: 0;
+            width: auto;
           }
         }
 
